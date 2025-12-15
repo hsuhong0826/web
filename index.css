@@ -1,0 +1,714 @@
+/* ========= Reset 預設重設 ========= */
+* {
+    margin: 0;
+    /* 去除所有元素的預設外邊距 */
+    padding: 0;
+    /* 去除所有元素的預設內邊距 */
+    box-sizing: border-box;
+    /* 設定所有元素的盒模型為 border-box */
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* ========= 全域設定 ========= */
+body {
+    font-family: "Segoe UI", sans-serif;
+    /* 設定全站字型為 Segoe UI */
+    color: #333;
+    /* 預設文字顏色為深灰 */
+}
+
+.container {
+    width: 90%;
+    /* 占寬度的90% */
+    max-width: 1200px;
+    /* 最大寬度限制為 1200px */
+    margin: auto;
+    /* 水平置中 */
+    display: flex;
+    /* 使用 Flex 排版 */
+    justify-content: space-between;
+    /* 左右兩端對齊 */
+    align-items: center;
+    /* 垂直置中對齊 */
+    flex-wrap: wrap;
+    /* 元素允許換行 */
+}
+
+/* ========= 導覽列區塊 ========= */
+.navbar {
+    background: #002244;
+    /* 背景色為深藍色 */
+    color: #fff;
+    /* 文字為白色 */
+    padding: 15px 0;
+    /* 上下內距為15px */
+    width: 100%;
+    /* 寬度100%，滿版 */
+}
+
+.navbar .container {
+    position: relative;
+    /* 設定相對定位以搭配絕對定位元素 */
+    width: 100%;
+    /* 寬度100% */
+    max-width: 100%;
+    /* 最大寬度為100% */
+    margin: 0 auto;
+    /* 水平置中 */
+    display: flex;
+    /* 使用 Flex 排版 */
+    justify-content: space-between;
+    /* 左右對齊 */
+    align-items: center;
+    /* 垂直置中 */
+    padding: 0;
+    /* 移除左右內距 */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    /* 字體大小 24px */
+    font-weight: bold;
+    /* 粗體字 */
+    color: white;
+    /* 白色文字 */
+    margin-left: 60px;
+    /* 左邊保留60px空間 */
+}
+
+.navbar nav .nav-links {
+    list-style: none;
+    /* 移除項目符號 */
+    display: flex;
+    /* 水平排列 */
+    gap: 20px;
+    /* 選單項目間距 */
+    padding-right: 60px;
+    /* 右邊距離 */
+    flex-wrap: wrap;
+    /* 項目允許換行 */
+}
+
+.navbar .nav-links li {
+    padding-left: 10px;
+    /* 左邊內距 */
+    padding-right: 10px;
+    /* 右邊內距 */
+}
+
+.navbar .nav-links li a {
+    color: white;
+    /* 文字顏色白色 */
+    text-decoration: none;
+    /* 移除底線 */
+    font-weight: 500;
+    /* 字重500 */
+    font-size: 18px;
+    /* 字體大小 */
+    transition: color 0.3s;
+    /* 顏色變化動畫 */
+}
+
+.logo-img {
+    height: 60px;
+}
+
+.navbar .nav-links li a:hover {
+    color: #00bfff;
+    /* 滑鼠懸停變藍色 */
+}
+
+/* ========= 輪播圖區塊 ========= */
+.carousel {
+    width: 100%;
+    aspect-ratio: 5 / 1;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+    /* 預設黑底，避免留白 */
+}
+
+.carousel-container {
+    width: 100%;
+    /* 滿寬 */
+    height: 100%;
+    /* 滿高 */
+    position: relative;
+    /* 相對定位給 slide 用 */
+}
+
+.slide {
+    width: 100%;
+    /* 滿版寬度 */
+    height: 100%;
+    /* 滿版高度 */
+    position: absolute;
+    /* 絕對定位 */
+    opacity: 0;
+    /* 預設透明 */
+    transition: opacity 1s ease-in-out;
+    /* 淡入淡出動畫 */
+}
+
+.slide.active {
+    opacity: 1;
+    /* 顯示當前圖片 */
+    z-index: 1;
+    /* 最上層 */
+}
+
+.slide img {
+    width: 100%;
+    /* 圖片寬度滿版 */
+    height: 100%;
+    /* 圖片高度滿版 */
+    object-fit: contain;
+    /* 等比例裁切鋪滿 */
+}
+
+.carousel-dots {
+    position: absolute;
+    /* 絕對定位於底部 */
+    bottom: 15px;
+    /* 底部往上 15px */
+    width: 100%;
+    /* 滿版寬度 */
+    text-align: center;
+    /* 置中 */
+    z-index: 2;
+    /* 比圖片高 */
+}
+
+.dot {
+    height: 10px;
+    /* 圓點高 */
+    width: 10px;
+    /* 圓點寬 */
+    margin: 0 5px;
+    /* 圓點間距 */
+    background-color: rgba(255, 255, 255, 0.6);
+    /* 半透明白色 */
+    border-radius: 50%;
+    /* 圓形 */
+    display: inline-block;
+    /* 行內區塊 */
+    transition: background-color 0.3s;
+    /* 背景動畫 */
+    cursor: pointer;
+    /* 滑鼠樣式變指標 */
+}
+
+.dot.active {
+    background-color: #969696;
+    /* 選中時為亮白 */
+}
+
+/* ========= 輪播圖箭頭 ========= */
+.arrow {
+    position: absolute;
+    /* 絕對定位 */
+    top: 50%;
+    /* 垂直置中 */
+    transform: translateY(-50%);
+    /* 垂直置中微調 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 黑色半透明背景 */
+    color: white;
+    /* 白色箭頭 */
+    font-size: 2rem;
+    /* 字體大小 */
+    padding: 10px 15px;
+    /* 內距 */
+    border: none;
+    /* 無邊框 */
+    cursor: pointer;
+    /* 游標為手指 */
+    z-index: 2;
+    /* 顯示在圖層之上 */
+    border-radius: 4px;
+    /* 圓角 */
+    transition: background-color 0.3s ease;
+    /* 背景色動畫 */
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 懸停加深 */
+}
+
+.left-arrow {
+    left: 10px;
+    /* 靠左 */
+}
+
+.right-arrow {
+    right: 10px;
+    /* 靠右 */
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #002244;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 6px;
+    background-color: #002244;
+    /* 深藍色，與導覽列呼應 */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.section-header {
+    text-align: center;
+    font-weight: bold;
+    margin: 30px 0 0 0;
+}
+
+.underline::after {
+    width: 200px;
+}
+
+.title-partner {
+    margin-top: 4px;
+    margin-bottom: 70px;
+}
+
+/* ========= 產品分類區塊 ========= */
+.categories {
+    padding: 50px 0;
+    /* 上下間距 */
+    background: white;
+    /* 白色背景 */
+}
+
+.categories .container {
+    display: flex;
+    /* 使用 Flex 排版 */
+    justify-content: space-between;
+    /* 間距平均分配 */
+    flex-wrap: wrap;
+    /* 換行 */
+    gap: 20px;
+    /* 元素間間距 */
+}
+
+.category {
+    flex: 1 1 30%;
+    /* 占 30% 寬度，可換行 */
+    margin: 10px;
+    background: #eaeaea;
+    /* 背景色 */
+    padding: 20px;
+    /* 內距 */
+    border-radius: 8px;
+    /* 圓角 */
+    text-align: center;
+    /* 文字置中 */
+}
+
+.category.full-width {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+.category img {
+    width: 100%;
+    /* 圖片滿寬 */
+    height: 200px;
+    /* 固定高度 */
+    object-fit: contain;
+    /* 裁切填滿 */
+    border-radius: 6px;
+    /* 圓角 */
+    margin-top: 10px;
+    /* 與標題間距 */
+}
+
+/* 合作夥伴樣式 */
+.categories-partner {
+    padding: 40px 0;
+    /* 上下間距 */
+    background: white;
+    /* 白色背景 */
+}
+
+.categories-partner .container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+    /* 控制項目間距 */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.categories-partner .category {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    background: #eaeaea;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.categories-partner .category img {
+    width: 80%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
+    border-radius: 6px;
+    /* 圓角 */
+    margin-top: 10px;
+    /* 與標題間距 */
+}
+
+.category a {
+    text-decoration: none;
+    /* 無底線 */
+    color: inherit;
+    /* 繼承文字顏色 */
+    display: block;
+    /* 區塊化整個 a */
+}
+
+.category a:hover h3 {
+    color: #007bff;
+    /* 滑鼠移上變藍色 */
+    text-decoration: underline;
+    /* 加上底線 */
+}
+
+/* ========= 頁尾區塊 ========= */
+footer {
+    background: #222;
+    /* 背景深灰 */
+    color: white;
+    /* 白字 */
+    text-align: left;
+    /* 左對齊 */
+    padding: 20px;
+    /* 內距 */
+    margin-top: 30px;
+    /* 上方間距 */
+}
+
+.footer-info {
+    background: #002244;
+    /* 更深背景 */
+    color: #fff;
+    /* 白字 */
+    padding: 20px;
+    /* 內距 */
+    margin-top: 10px;
+    /* ✅ 確保本身無額外 margin */
+    border-top: 1px solid #111;
+    /* ✅ 加上邊框避免白縫視覺 */
+}
+
+/* ========= 聯絡資訊 + 地圖區塊 ========= */
+.contact-map {
+    display: flex;
+    /* 使用 Flex 排版 */
+    flex-wrap: wrap;
+    /* 換行 */
+    justify-content: space-between;
+    /* 分佈對齊 */
+    gap: 50px;
+    /* 間距 */
+    align-items: flex-start;
+    /* 靠上對齊 */
+}
+
+.contact-text {
+    flex: 1 1 300px;
+    /* 占據寬度且可換行 */
+    min-width: 250px;
+    /* 最小寬度 */
+    text-align: left;
+    /* 左對齊 */
+    align-self: center;
+    /* 垂直置中 */
+    padding-left: 25px;
+    /* 靠右一點 */
+}
+
+.contact-text h3 {
+    margin-bottom: 15px;
+    /* 標題下方間距 */
+    font-size: 22px;
+    /* 標題字大小 */
+    color: #fff;
+    /* 白色 */
+}
+
+.contact-text p {
+    margin-bottom: 8px;
+    /* 段落下間距 */
+    font-size: 18px;
+    /* 字體大小 */
+    color: #ccc;
+    /* 灰色文字 */
+}
+
+.line-qr {
+    position: relative;
+    /* 相對定位 */
+    left: 50px;
+    /* 靠左 */
+}
+
+.contact-map-embed {
+    flex: 1 1 300px;
+    /* 寬度設定 */
+    min-width: 300px;
+    /* 最小寬度 */
+    max-width: 400px;
+    /* 最大寬度 */
+    position: relative;
+    /* 相對定位 */
+    left: 70px;
+    /* 靠左 */
+}
+
+.contact-map-embed iframe {
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1 / 1;
+    /* 寬高比 */
+    border: 0;
+    /* 無邊框 */
+}
+
+/* ========= 版權區塊 ========= */
+.copyright {
+    background-color: #000000;
+    /* 白底 */
+    color: #ffffff;
+    /* 字色深灰 */
+    text-align: center;
+    /* 置中對齊 */
+    font-size: 14px;
+    /* 字體大小 */
+    padding: 12px 0;
+    /* 上下內距 */
+}
+
+/* ========= 漢堡選單樣式 ========= */
+.menu-toggle {
+    display: none;
+    /* 預設不顯示，僅在手機版顯示 */
+    font-size: 32px;
+    /* 漢堡圖示大小 */
+    color: white;
+    /* 圖示顏色白色 */
+    cursor: pointer;
+    /* 游標為手指形狀 */
+    padding: 10px 20px;
+    /* 內距 */
+    position: absolute;
+    /* 絕對定位 */
+    right: 0;
+    /* 貼齊右邊 */
+    top: 50%;
+    /* 垂直置中 */
+    transform: translateY(-50%);
+    /* 微調垂直置中 */
+    z-index: 1001;
+    /* 層級比 menu 高 */
+    background: transparent;
+    /* 背景透明 */
+}
+
+.menu {
+    display: block;
+    /* 桌面版預設顯示選單 */
+}
+
+/* ========= 響應式設計 ========= */
+@media (max-width: 768px) {
+
+    /* Navbar & Menu */
+    .logo-img {
+        height: 50px;
+    }
+
+    .navbar .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .navbar .logo {
+        margin-left: 15px !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        right: -300px;
+        width: 60vw;
+        max-width: 110px;
+        height: 100vh;
+        background-color: #002244;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .menu.open {
+        right: 0;
+    }
+
+    .navbar nav .nav-links {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .nav-links {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .nav-links a {
+        padding-left: 5px;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    /* Categories */
+    .categories .container {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .category {
+        flex: 1 1 100%;
+    }
+
+    .category img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+    }
+
+    /* Contact Map */
+    .contact-text {
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 0px;
+    }
+
+    .line-qr {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        left: 0px;
+    }
+
+    .line-qr img {
+        width: 300px;
+        height: auto;
+        margin-top: 0px;
+    }
+
+    .contact-map-embed {
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+    /* Carousel */
+    .carousel {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .carousel-container {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+        padding: 8px 12px;
+    }
+
+    /* Section Title & Partners */
+    .section-title {
+        font-size: 30px;
+    }
+
+    .section-title::after {
+        width: 50px;
+        height: 5px;
+        margin-top: 6px;
+    }
+
+    .section-header {
+        text-align: center;
+        margin: 30px 0 30px 0;
+    }
+
+    .categories-partner .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories-partner .category {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-partner .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

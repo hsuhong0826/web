@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-TW"> <!-- 設定語言為繁體中文 -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- 設定字符編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設定，讓畫面適應不同裝置寬度 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 設定瀏覽器頁籤的小圖示（favicon） -->
+    <title>贊耀資訊有限公司</title> <!-- 設定頁面標題，顯示於瀏覽器頁籤 -->
+    <link rel="stylesheet" href="navigation-bar.css" /> <!-- 引入外部 CSS 樣式表 -->
+</head>
+
+<body> <!-- 網頁主體開始 -->
+
+    <!-- 導覽列區塊 -->
+    <header class="navbar"> <!-- 標頭區塊，含導覽列樣式 -->
+        <div class="container"> <!-- 主容器：控制寬度與內部排列 -->
+
+            <div class="logo"> <!-- Logo 區塊 -->
+                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img">
+                <!-- 顯示公司 Logo 圖片 -->
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 漢堡選單按鈕，手機版使用，點擊會呼叫 toggleMenu() 函式 -->
+
+            <nav class="menu"> <!-- 導覽列區塊 -->
+                <ul class="nav-links"> <!-- 導覽連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering-achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about-us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+
+        </div> <!-- 結束 container -->
+    </header> <!-- 結束導覽列 -->
+
+    <!-- ✅ 第二頁內容區塊 -->
+    <main class="container" style="padding: 40px 0;"> <!-- 主內容區塊，包含頁面主要內容 -->
+        <div class="chat-section">
+            <h1 class="section-title">伺服器</h1>
+
+            <!-- 右圖左文字 -->
+            <div class="message-box right">
+                <h2 class="box-subtitle">機架式伺服器<br class="mobile-break">（Rack Server）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">機架式伺服器是一種專為資料中心設計的伺服器，可安裝於標準的機架（Rack）中，具備高密度、易於集中管理與擴充的特性。
+                    其體積小、效能高，常被用於需要多台伺服器部署的環境，如大型企業或雲端服務機房，有效節省空間並提升維護效率。</div>
+            </div>
+
+            <!-- 左圖右文字 -->
+            <div class="message-box left">
+                <h2 class="box-subtitle">塔式伺服器<br class="mobile-break">（Tower Server）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">塔式伺服器外型類似傳統電腦主機，適合中小型企業或空間有限的辦公室使用。
+                    其安裝簡單、散熱良好、成本較低，具備獨立運作能力且易於升級，適合用於檔案管理、列印伺服、簡易資料庫或內部應用服務等基本 IT 運算需求。</div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">虛擬伺服器<br class="mobile-break">（Virtual Server）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">虛擬伺服器是透過虛擬化技術，在一台實體伺服器上模擬多個獨立的虛擬機，每台虛擬伺服器可運行不同作業系統與應用。
+                    其彈性高、資源利用率佳，能有效降低硬體成本與耗能，廣泛應用於測試環境、雲端部署與資源隔離的需求。</div>
+            </div>
+
+            <div class="message-box left">
+                <h2 class="box-subtitle">儲存伺服器<br class="mobile-break">（Storage Server）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">儲存伺服器專門用來集中管理與提供大量資料儲存空間，支援多種存取協定如 NAS 或 SAN。
+                    適合備份、檔案共享、大數據分析與多使用者存取情境，具備高容量、穩定性與擴充性，是企業資料管理的核心設備之一。</div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">應用伺服器<br class="mobile-break">（Application Server）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">應用伺服器用於部署與執行企業級應用程式，如ERP、CRM、網站後台或客製系統。
+                    它提供資料處理、業務邏輯運算與前後端串接能力，讓使用者可透過網頁或應用程式進行互動。具備穩定性與高效能，是企業數位營運的關鍵平台。</div>
+            </div>
+
+            <div class="message-box left">
+                <h2 class="box-subtitle">備援與容錯機制<br class="mobile-break">（High Availability / Backup Server）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">備援與容錯伺服器可在主系統發生故障時自動切換，確保服務不中斷。它結合 RAID 備份、雙機熱備、容錯切換等技術，有效降低系統單點故障風險。
+                    廣泛應用於金融、醫療、電商等對系統穩定性要求極高的產業。</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript 區塊：控制漢堡選單開關 -->
+    <script>
+        function toggleMenu() { // 定義 toggleMenu 函式
+            const menu = document.querySelector('.menu'); // 選取 menu 元素
+            menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
+        }
+    </script>
+    <div class="copyright"> <!-- 設定版權區 -->
+        © 2025 贊耀資訊有限公司 所有權利均予保留 <!-- 版權文字 -->
+    </div>
+
+</body> <!-- 結束 body 區塊 -->
+
+</html> <!-- 結束 HTML 文件 -->

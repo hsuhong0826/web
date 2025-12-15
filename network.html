@@ -1,0 +1,99 @@
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-TW"> <!-- 設定語言為繁體中文 -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- 設定字符編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設定，讓畫面適應不同裝置寬度 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 設定瀏覽器頁籤的小圖示（favicon） -->
+    <title>贊耀資訊有限公司</title> <!-- 設定頁面標題，顯示於瀏覽器頁籤 -->
+    <link rel="stylesheet" href="navigation-bar.css" /> <!-- 引入外部 CSS 樣式表 -->
+</head>
+
+<body> <!-- 網頁主體開始 -->
+
+    <!-- 導覽列區塊 -->
+    <header class="navbar"> <!-- 標頭區塊，含導覽列樣式 -->
+        <div class="container"> <!-- 主容器：控制寬度與內部排列 -->
+
+            <div class="logo"> <!-- Logo 區塊 -->
+                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img">
+                <!-- 顯示公司 Logo 圖片 -->
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 漢堡選單按鈕，手機版使用，點擊會呼叫 toggleMenu() 函式 -->
+
+            <nav class="menu"> <!-- 導覽列區塊 -->
+                <ul class="nav-links"> <!-- 導覽連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering-achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about-us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+
+        </div> <!-- 結束 container -->
+    </header> <!-- 結束導覽列 -->
+
+    <!-- ✅ 第二頁內容區塊 -->
+    <main class="container" style="padding: 40px 0;"> <!-- 主內容區塊，包含頁面主要內容 -->
+        <div class="chat-section">
+            <h1 class="section-title">網管設備</h1>
+
+            <!-- 右圖左文字 -->
+            <div class="message-box right">
+                <h2 class="box-subtitle">L2/L3 管理型交換器<br class="mobile-break">（Switch）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">
+                    L2/L3 Switch 是可管理的交換器，能根據不同層級協定進行資料傳輸與轉送。L2 Switch 根據 MAC 位址進行封包轉發，適合區域網路；
+                    L3 Switch 則支援 IP 路由功能，可跨網段轉送資料，提升大型網路的效率與彈性，是企業網路核心設備之一。
+                </div>
+            </div>
+
+            <!-- 左圖右文字 -->
+            <div class="message-box left">
+                <h2 class="box-subtitle">路由器<br class="mobile-break">（Router） </h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">路由器是網路中繼設備，負責在不同網路之間傳送資料，根據 IP 位址與路由表決定最佳傳輸路徑。
+                    它能連接多個區網或連上網際網路，確保資料正確且有效率地傳送，是企業與家庭連網不可或缺的設備。
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">防火牆<br class="mobile-break">（Firewall）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">防火牆是一種網路安全設備或軟體，主要功能是監控並控制進出網路的資料流，根據預先設定的安全規則來阻擋未授權的存取行為。
+                    它可位於內部網路與外部網路（如網際網路）之間，像一道數位防線，防止駭客入侵、惡意程式攻擊或敏感資料外洩。
+                </div>
+            </div>
+
+            <div class="message-box left">
+                <h2 class="box-subtitle">無線基地台<br class="mobile-break">（AP）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">無線基地台可建立無線網路，讓裝置如手機、筆電透過 Wi-Fi 連線。
+                    AP 將有線網路轉為無線訊號，提供無干擾的連線環境。多台 AP 可組成無線漫遊網路，廣泛應用於辦公室、校園與商業空間中。</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript 區塊：控制漢堡選單開關 -->
+    <script>
+        function toggleMenu() { // 定義 toggleMenu 函式
+            const menu = document.querySelector('.menu'); // 選取 menu 元素
+            menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
+        }
+    </script>
+    <div class="copyright"> <!-- 設定版權區 -->
+        © 2025 贊耀資訊有限公司 所有權利均予保留 <!-- 版權文字 -->
+    </div>
+
+</body> <!-- 結束 body 區塊 -->
+
+</html> <!-- 結束 HTML 文件 -->

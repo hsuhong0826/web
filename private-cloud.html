@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-TW"> <!-- 設定語言為繁體中文 -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- 設定字符編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設定，讓畫面適應不同裝置寬度 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 設定瀏覽器頁籤的小圖示（favicon） -->
+    <title>贊耀資訊有限公司</title> <!-- 設定頁面標題，顯示於瀏覽器頁籤 -->
+    <link rel="stylesheet" href="navigation-bar.css" /> <!-- 引入外部 CSS 樣式表 -->
+</head>
+
+<body> <!-- 網頁主體開始 -->
+
+    <!-- 導覽列區塊 -->
+    <header class="navbar"> <!-- 標頭區塊，含導覽列樣式 -->
+        <div class="container"> <!-- 主容器：控制寬度與內部排列 -->
+
+            <div class="logo"> <!-- Logo 區塊 -->
+                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img">
+                <!-- 顯示公司 Logo 圖片 -->
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 漢堡選單按鈕，手機版使用，點擊會呼叫 toggleMenu() 函式 -->
+
+            <nav class="menu"> <!-- 導覽列區塊 -->
+                <ul class="nav-links"> <!-- 導覽連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering-achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about-us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+
+        </div> <!-- 結束 container -->
+    </header> <!-- 結束導覽列 -->
+
+    <!-- ✅ 第二頁內容區塊 -->
+    <main class="container" style="padding: 40px 0;"> <!-- 主內容區塊，包含頁面主要內容 -->
+        <div class="chat-section">
+            <h1 class="section-title">私有雲端</h1>
+
+            <!-- 右圖左文字 -->
+            <div class="message-box right">
+                <h2 class="box-subtitle">儲存設備整合<br class="mobile-break">（NAS／SAN／RAID）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">
+                    整合 NAS、SAN 與 RAID 架構的儲存解決方案，能有效管理與集中資料，提升存取速度與資料安全性。
+                    支援多種備援與容錯機制，確保企業關鍵資料在高效能環境中被妥善保存與運用。
+                </div>
+            </div>
+
+            <!-- 左圖右文字 -->
+            <div class="message-box left">
+                <h2 class="box-subtitle">備份與災難復原<br class="mobile-break">（Backup & DR）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">
+                    提供全方位備份與災難復原機制，支援虛擬機、伺服器與資料的自動備份與還原。
+                    當系統發生異常或資料損毀時，可迅速復原，保障企業運作不中斷，降低損失風險。
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">雲端帳號與存取權限控管<br class="mobile-break">（AD / LDAP / IAM）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">
+                    整合 AD、LDAP 與 IAM 架構，集中管理使用者帳號與存取權限。
+                    依據部門或角色設定資源使用範圍，提升資安防護層級，同時讓企業內部帳號管理流程更簡化與有效率。
+                </div>
+            </div>
+
+            <div class="message-box left">
+                <h2 class="box-subtitle">VPN 私有連線解決方案<br class="mobile-break">（Site-to-Site／Remote Access）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">
+                    提供安全穩定的 VPN 解決方案，支援 Site-to-Site 與遠端使用者連線。
+                    所有通訊皆經過加密處理，確保企業資料在跨網傳輸中不被攔截，適合分公司與遠距辦公情境使用。
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript 區塊：控制漢堡選單開關 -->
+    <script>
+        function toggleMenu() { // 定義 toggleMenu 函式
+            const menu = document.querySelector('.menu'); // 選取 menu 元素
+            menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
+        }
+    </script>
+    <div class="copyright"> <!-- 設定版權區 -->
+        © 2025 贊耀資訊有限公司 所有權利均予保留 <!-- 版權文字 -->
+    </div>
+
+</body> <!-- 結束 body 區塊 -->
+
+</html> <!-- 結束 HTML 文件 -->

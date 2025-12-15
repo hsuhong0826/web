@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-TW"> <!-- 設定語言為繁體中文 -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- 設定字符編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設定，讓畫面適應不同裝置寬度 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 設定瀏覽器頁籤的小圖示（favicon） -->
+    <title>贊耀資訊有限公司</title> <!-- 設定頁面標題，顯示於瀏覽器頁籤 -->
+    <link rel="stylesheet" href="navigation-bar.css" /> <!-- 引入外部 CSS 樣式表 -->
+</head>
+
+<body> <!-- 網頁主體開始 -->
+
+    <!-- 導覽列區塊 -->
+    <header class="navbar"> <!-- 標頭區塊，含導覽列樣式 -->
+        <div class="container"> <!-- 主容器：控制寬度與內部排列 -->
+
+            <div class="logo"> <!-- Logo 區塊 -->
+                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img">
+                <!-- 顯示公司 Logo 圖片 -->
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 漢堡選單按鈕，手機版使用，點擊會呼叫 toggleMenu() 函式 -->
+
+            <nav class="menu"> <!-- 導覽列區塊 -->
+                <ul class="nav-links"> <!-- 導覽連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering-achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about-us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+
+        </div> <!-- 結束 container -->
+    </header> <!-- 結束導覽列 -->
+
+    <!-- ✅ 第二頁內容區塊 -->
+    <main class="container" style="padding: 40px 0;"> <!-- 主內容區塊，包含頁面主要內容 -->
+        <div class="chat-section">
+            <h1 class="section-title">電腦設備</h1>
+
+            <!-- 右圖左文字 -->
+            <div class="message-box right">
+                <h2 class="box-subtitle">遊戲型電腦<br class="mobile-break">（Gaming PC）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">專為高效能遊戲體驗打造，搭載高階顯示卡與強勁處理器，支援高幀率、4K畫質與VR技術。
+                    無論是電競、3A 大作還是串流直播，皆能流暢執行。系統散熱與RGB燈效也可依需求客製，兼具性能與外觀。</div>
+            </div>
+
+            <!-- 左圖右文字 -->
+            <div class="message-box left">
+                <h2 class="box-subtitle">桌上型電腦<br class="mobile-break">（Desktop PC）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">穩定耐用、擴充性高，適用於家庭、辦公與工作站需求。
+                    可依不同用途（文書處理、剪輯設計、資料分析）進行硬體配置，搭配多樣化外殼設計與效能規格，提供長期穩定的運算環境。</div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">筆記型電腦<br class="mobile-break">（Notebook）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">兼顧效能與攜帶性，適合行動辦公、遠距工作與日常使用。
+                    提供文書型、繪圖型與商務型等多種機種選擇，搭載 SSD 高速儲存與長效電池，讓工作與娛樂隨時隨地不卡關。</div>
+            </div>
+
+            <div class="message-box left">
+                <h2 class="box-subtitle">商用型電腦<br class="mobile-break">（Business PC）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">針對企業需求量身打造，具備高穩定性、安全性與集中管理功能，支援多樣化軟體與週邊設備。
+                    適用於會議室、櫃檯、POS 系統與內部辦公應用，並可客製大量採購配置。</div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">顯示卡<br class="mobile-break">（Graphics Card）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">從基礎顯示到高階繪圖與AI運算應用皆涵蓋，支援 NVIDIA、AMD 等主流品牌。
+                    提供遊戲級、高效能渲染、深度學習加速等多樣選擇，滿足設計師、工程師與玩家的需求。</div>
+            </div>
+
+            <div class="message-box left">
+                <h2 class="box-subtitle">電腦週邊<br class="mobile-break">（Computer Peripherals）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">提供多樣化的周邊設備，如人體工學滑鼠、機械式鍵盤與高解析度螢幕，提升使用舒適性與工作效率。
+                    支援商務、遊戲、設計等應用情境，亦可依企業需求進行整套規劃與部署。</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript 區塊：控制漢堡選單開關 -->
+    <script>
+        function toggleMenu() { // 定義 toggleMenu 函式
+            const menu = document.querySelector('.menu'); // 選取 menu 元素
+            menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
+        }
+    </script>
+    <div class="copyright"> <!-- 設定版權區 -->
+        © 2025 贊耀資訊有限公司 所有權利均予保留 <!-- 版權文字 -->
+    </div>
+
+</body> <!-- 結束 body 區塊 -->
+
+</html> <!-- 結束 HTML 文件 -->

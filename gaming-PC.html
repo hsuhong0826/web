@@ -1,0 +1,348 @@
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-TW"> <!-- 設定語言為繁體中文 -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- 設定字符編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設定，讓畫面適應不同裝置寬度 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 設定瀏覽器頁籤的小圖示（favicon） -->
+    <title>贊耀資訊有限公司</title> <!-- 設定頁面標題，顯示於瀏覽器頁籤 -->
+    <link rel="stylesheet" href="gaming-PC.css" /> <!-- 引入外部 CSS 樣式表 -->
+</head>
+
+<body> <!-- 網頁主體開始 -->
+
+    <!-- 導覽列區塊 -->
+    <header class="navbar"> <!-- 標頭區塊，含導覽列樣式 -->
+        <div class="container"> <!-- 主容器：控制寬度與內部排列 -->
+
+            <div class="logo"> <!-- Logo 區塊 -->
+                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img">
+                <!-- 顯示公司 Logo 圖片 -->
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 漢堡選單按鈕，手機版使用，點擊會呼叫 toggleMenu() 函式 -->
+
+            <nav class="menu"> <!-- 導覽列區塊 -->
+                <ul class="nav-links"> <!-- 導覽連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering-achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about-us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+
+        </div> <!-- 結束 container -->
+    </header> <!-- 結束導覽列 -->
+
+    <!-- ✅ 第二頁內容區塊 -->
+    <main class="container" style="padding: 40px 0;"> <!-- 主內容區塊，包含頁面主要內容 -->
+        <div class="chat-section">
+            <h1 class="section-title">電競專區</h1>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">I5-14400F-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>Intel i5-14400F（10核心 / 16緒）2.5GHz（↑4.7GHz）/ 20MB 快取 / 無內顯 / 65W</li>
+                        <li>微星 B760M BOMBER WIFI（M-ATX / LAN 2.5Gb + 無線 / 註冊四年 / 2 DIMM）</li>
+                        <li>美光 Micron Crucial 單條 16GB DDR5 5600 / CL46（原生顆粒）</li>
+                        <li>美光 Micron Crucial P310 1TB / Gen4 PCIe 4.0
+                            　讀取：7100MB/s，寫入：6000MB/s，3D QLC 顆粒，五年保固</li>
+                        <li>微星 RTX3050 VENTUS 2X E 6G OC（1492MHz / 雙風扇 / 19cm / 註冊四年）</li>
+                        <li>KISS QUIET 安規 ATX 500W 電源供應器</li>
+                        <li>YAMA 雅瑪 AC 120 機殼（4導管 / 12cm 風扇 x1 / ARGB 燈效 / 高 153mm）</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">R5-7500F-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>AMD R5 7500F MPK（含風扇）【6核心 / 12緒】3.7GHz（↑5.0GHz）代理商三年保固</li>
+                        <li>微星 PRO B650M-P（M-ATX / LAN 2.5G / 註冊四年）6+2+1 相電源</li>
+                        <li>美光 Micron Crucial 單條 16GB DDR5 5600 / CL46（原生顆粒）</li>
+                        <li>美光 Micron Crucial P310 1TB / Gen4 PCIe 4.0
+                            　讀取：7100MB/s，寫入：6000MB/s，3D QLC 顆粒，五年保固</li>
+                        <li>微星 RTX3050 VENTUS 2X E 6G OC（1492MHz / 19cm / 雙風扇 / 註冊四年）</li>
+                        <li>KISS QUIET 安規 ATX 500W</li>
+                        <li>YAMA 雅瑪 AC 120（4導管 / 12cm 風扇 *1 / ARGB 燈效 / 高 153mm）</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">U5-225-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>Intel Core Ultra 5 225（10核心）3.3GHz（↑4.9GHz）/ 20MB 快取 / 內顯 Xe-core【代理盒裝】</li>
+                        <li>微星 B760M GAMING PLUS WIFI（M-ATX / LAN 2.5Gb + 無線 / 註冊五年）12+1+1 相電源</li>
+                        <li>美光 Micron Crucial PRO 超頻 32GB（雙通 16GB*2）DDR5 6400 / CL38 白色散熱片</li>
+                        <li>美光 Micron Crucial P510 1TB Gen5 PCIe 5.0
+                            　讀取：11000MB/s，寫入：9500MB/s，QLC 顆粒【五年保】</li>
+                        <li>微星 RTX5050 8G GAMING OC（2647MHz / 21cm / 雙風扇 / 註冊五年）</li>
+                        <li>Montech BETA 550W 銅牌 / 主日系 / 五年保</li>
+                        <li>Xigmatek 富鈦 XT402 CPU 散熱器（單塔雙風 / ARGB / 4導管 / TDP 205W）</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">R5-9600X-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>AMD R5 9600X 代理盒裝【6核心 / 12緒】3.9GHz（↑5.4GHz）/ 65W / 具 RDNA 內顯</li>
+                        <li>微星 PRO B850M-P WIFI（M-ATX / LAN 5G + Wi-Fi 7 / 註冊四年）7+2+1 相電源</li>
+                        <li>美光 Micron Crucial PRO 超頻 32GB（雙通 16GB*2）DDR5 6400 / CL38 白色散熱片</li>
+                        <li>美光 Micron Crucial P510 1TB Gen5 PCIe 5.0
+                            　讀取：11000MB/s，寫入：9500MB/s，QLC 顆粒【五年保】</li>
+                        <li>微星 RTX5050 8G GAMING OC（2647MHz / 21cm / 雙風扇 / 註冊五年）</li>
+                        <li>Montech BETA 550W 銅牌 / 主日系 / 5年保固</li>
+                        <li>Xigmatek 富鈦 XT402 CPU 散熱器（單塔雙風 / ARGB / 4導管 / TDP 205W）</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">R7-7800-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>AMD R7 7800X3D 盒裝處理器【8核心 / 16緒】4.2GHz（↑5.0GHz）96MB 快取 / 120W / 具內顯</li>
+                        <li>微星 PRO B650M-P WIFI（M-ATX / LAN 2.5G / 註冊四年）6+2+1 相電源</li>
+                        <li>美光 Micron Crucial PRO 超頻 32GB（雙通 16GB*2）DDR5 6400 / CL38 白色散熱片</li>
+                        <li>美光 Micron Crucial P510 1TB Gen5 PCIe 5.0
+                            　讀取：11000MB/s，寫入：9500MB/s，QLC 顆粒【五年保】</li>
+                        <li>微星 RTX5060 8G VENTUS 2X OC（2535MHz / 20cm / 雙風扇 / 註冊四年）</li>
+                        <li>JAWIN 威力 650W 足瓦電源供應器
+                            　金牌 80+ 認證 / 全日系電容（五年保固）</li>
+                        <li>富鈦科技 AK6 Dual Digital ARGB 數位顯示雙塔雙風扇 CPU 散熱器</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">U7-265-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>Intel Core Ultra 7 265K【20核心】3.9GHz（↑5.5GHz）/ 30MB 快取 / 內顯 Xe-core / 無風扇【代理盒裝】</li>
+                        <li>微星 B860M GAMING PLUS WIFI（M-ATX / Intel 5G + Wi-Fi 7 / 註冊五年）</li>
+                        <li>美光 Micron Crucial PRO 超頻 32GB（雙通 16GB*2）DDR5 6400 / CL38 白色散熱片</li>
+                        <li>美光 Micron Crucial P510 1TB Gen5 PCIe 5.0
+                            　讀取：11000MB/s，寫入：9500MB/s，QLC 顆粒【五年保】</li>
+                        <li>微星 RTX5060 8G VENTUS 2X OC（2535MHz / 20cm / 雙風扇 / 註冊四年）</li>
+                        <li>JAWIN 威力 650W 足瓦電源供應器
+                            　金牌 80+ / 全日系電容（5年保固）</li>
+                        <li>富鈦科技 AK6 Dual Digital ARGB 數位顯示 雙塔雙風扇 CPU 散熱器</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">U7-265-雪白電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>Intel Core Ultra 7 265K【20核心】3.9GHz（↑5.5GHz）/ 30MB 快取 / 內顯 Xe-core / 無風扇【代理盒裝】</li>
+                        <li>微星 PRO Z890-S WIFI WHITE（ATX / LAN 2.5Gb + Wi-Fi 7 / 雪白版）</li>
+                        <li>美光 Micron Crucial PRO 超頻 64GB（雙通 32GB*2）DDR5 6400 / CL40 白色散熱片</li>
+                        <li>美光 Micron Crucial P510 2TB Gen5 PCIe 5.0
+                            　讀取：11000MB/s，寫入：9500MB/s，QLC 顆粒【五年保】</li>
+                        <li>微星 RTX5070 12G GAMING TRIO OC WHITE（2625MHz / 34cm / 三風扇 / 雪白款）</li>
+                        <li>Montech TITAN PLA 850W 白色電源供應器
+                            　雙 8 / 白金 / 全模組 / ATX3.1（PCIe 5.1）/ 智慧停轉 / 10 年保固</li>
+                        <li>Xigmatek 富鈦 COMBAT 360 ARCTIC ARGB 一體式水冷（白）（3年保）</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">R7-9700X-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>AMD R7 9700X 代理盒裝【8核心 / 16緒】3.8GHz（↑5.5GHz）/ 65W / 具 RDNA 內顯</li>
+                        <li>微星 X870 GAMING PLUS WIFI（ATX / LAN 5G + Wi-Fi 7 / 註冊五年）14+2+1 相供電</li>
+                        <li>美光 Micron Crucial PRO 超頻 64GB（雙通 32GB*2）DDR5 6400 / CL40 白色散熱片</li>
+                        <li>美光 Micron Crucial P510 2TB Gen5 PCIe 5.0
+                            　讀取：11000MB/s，寫入：9500MB/s，QLC 顆粒【五年保】</li>
+                        <li>微星 RTX5060Ti 16G VENTUS 3X OC（2617MHz / 31cm / 三風扇 / 註冊五年）</li>
+                        <li>佳威科技 威力 850W 電源供應器（ATX3.1 / PCIe 5.1 / 金牌 / 5年保固）</li>
+                        <li>Xigmatek 富鈦科技 COMBAT 360 ARCTIC ARGB 一體式水冷（黑）（3年保）</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">R7-9800X3D-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>AMD R7 9800X3D 代理盒裝【8核心 / 16緒】4.7GHz（↑5.2GHz）/ 120W / 96MB 快取 / 具 RDNA 內顯</li>
+                        <li>微星 X870 GAMING PLUS WIFI（ATX / LAN 5G + Wi-Fi 7 / 註冊五年）14+2+1 相供電</li>
+                        <li>美光 Micron Crucial PRO 超頻 64GB（雙通 32GB*2）DDR5 6400 / CL40 黑色散熱片</li>
+                        <li>美光 Micron Crucial T700 2TB Gen5 PCIe 5.0
+                            　讀取：12400MB/s，寫入：11800MB/s，TLC 顆粒【五年保】</li>
+                        <li>微星 RTX5080 16G VENTUS 3X OC（2655MHz / 31cm / 三風扇 / 註冊四年）</li>
+                        <li>Montech TITAN GOLD 1000W 電源供應器
+                            　雙 8 / 金牌 / 全模組 / ATX3.0（PCIe 5.0）/ 全日系 / 智慧停轉 / 10 年保固</li>
+                        <li>Montech HyperFlow ARGB 360（黑）水冷
+                            　ARGB / 厚度 28mm / 風扇壓力強 / 保固 5.5 or 6 年</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">U9-285-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>Intel Core Ultra 9 285K【24核心】3.7GHz（↑5.7GHz）/ 36MB 快取 / 內顯 Xe-core / 無風扇</li>
+                        <li>微星 Z890 GAMING PLUS WIFI（ATX / Killer 5Gb + Wi-Fi 7 / 註冊五年）</li>
+                        <li>美光 Micron Crucial PRO 超頻 64GB（雙通 32GB*2）DDR5 6400 / CL40 黑色散熱片</li>
+                        <li>微星 SPATIUM M580 FROZR 4TB Gen5 PCIe 5.0
+                            　讀取：14100MB/s，寫入：12600MB/s【五年保】DRAM 快取</li>
+                        <li>微星 RTX5090 32G GAMING TRIO OC（2497MHz / 36cm）</li>
+                        <li>Montech TITAN GOLD 1200W 電源供應器
+                            　雙 8 / 金牌 / 全模組 / ATX3.0（PCIe 5.0）/ 全日系 / 智慧停轉 / 10年保固</li>
+                        <li>Montech HyperFlow ARGB 360（黑）水冷
+                            　ARGB / 28mm 風扇 / 厚度 5.5 / 6年保</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">R9-9950X3D-電競機</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>AMD R9 9950X3D 代理盒裝【16核心 / 32緒】4.3GHz（↑5.7GHz）/ 170W / 具內顯</li>
+                        <li>微星 X870 GAMING PLUS WIFI（ATX / LAN 5G + Wi-Fi 7 / 註冊五年）14+2+1 相供電</li>
+                        <li>美光 Micron Crucial PRO 超頻 64GB（雙通 32GB*2）DDR5 6400 / CL40 黑色散熱片</li>
+                        <li>微星 SPATIUM M580 FROZR 4TB Gen5 PCIe 5.0
+                            　讀取：14100MB/s，寫入：12600MB/s【五年保】DRAM 快取</li>
+                        <li>微星 RTX5090 32G GAMING TRIO OC（2497MHz / 36cm）</li>
+                        <li>Montech TITAN GOLD 1200W 電源供應器
+                            　雙 8 / 金牌 / 全模組 / ATX3.0（PCIe 5.0）/ 全日系 / 智慧停轉 / 10年保固</li>
+                        <li>Montech HyperFlow ARGB 360（黑）水冷
+                            　ARGB / 28mm 風扇 / 厚度 5.5 / 6年保</li>
+                        <li>Windows 11 中文家用隨機版 64 位元（正版）</li>
+                        <li>⚠️ 需選購機殼 – 價格均未包含機殼費用</li>
+                        <li>📦 以上含組裝、系統安裝、工具程式、穩定度測試、協助官網註冊、一年店保</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+            <div class="message-box right">
+                <h2 class="box-subtitle">選購品</h2>
+                <div class="content-box">
+                    <ul class="spec-list">
+                        <li>PC-cillin 趨勢 雲端版 三年 1 台防護版：$990</li>
+                        <li>Microsoft 微軟 Office 2024 家用中文版（盒裝）
+                            　（⚠️ 軟體拆封後無法退換貨）：$4290</li>
+                        <li>顯示卡支撐架：$390</li>
+                        <li>VGM2 直立式顯卡套件：$1690</li>
+                        <li>電競鍵盤、滑鼠、螢幕：價格另計</li>
+                    </ul>
+                    <div class="avatar-box">
+                        <img class="avatar" src="images/erp.png" alt="右圖">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- JavaScript 區塊：控制漢堡選單開關 -->
+    <script>
+        function toggleMenu() { // 定義 toggleMenu 函式
+            const menu = document.querySelector('.menu'); // 選取 menu 元素
+            menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
+        }
+    </script>
+    <footer class="footer-info">
+        <div class="container contact-map">
+            <div class="contact-text">
+                <h3>聯絡我們</h3>
+                <p>公司名稱：贊耀資訊有限公司 ZanYao</p>
+                <p>電話：02-2608-0915</p>
+                <p>Email：service@zanyao.com.tw</p>
+                <p>地址：新北市林口區文化二路一段68巷31號1樓</p>
+            </div>
+
+            <div class="line-qr">
+                <img src="images/line qrcod.jpg" alt="Line QR Code" width="300" height="300">
+            </div>
+
+            <div class="contact-map-embed">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.9695086425377!2d121.36435337515907!3d25.069022577793703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7d1c42a8529%3A0x58a0e78605427097!2zWlkgR2FtaW5nIFBDLembu-ertumbu-iFpi7pm7vnq7bpgLHpgoou5rC05Ya3Lue1hOijnee2reS_ru-8iOimj-agvOmAj-aYji7lg7nmoLzlhazplosu5YWN5L-h55So5Y2h5YiG5pyfLuWIt-WNoe-8iQ!5e0!3m2!1szh-TW!2stw!4v1756904124628!5m2!1szh-TW!2stw"
+                    width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright"> <!-- 設定版權區 -->
+        © 2025 贊耀資訊有限公司 所有權利均予保留 <!-- 版權文字 -->
+    </div>
+
+</body> <!-- 結束 body 區塊 -->
+
+</html> <!-- 結束 HTML 文件 -->

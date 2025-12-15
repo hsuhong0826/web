@@ -1,0 +1,203 @@
+<!-- =========== ✅ 網頁基本設定（標題、編碼、CSS）============= -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" /> <!-- 設定編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設計：適應不同裝置 -->
+
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 頁籤左側小圖示 -->
+    <title>贊耀資訊有限公司</title> <!-- 頁面標題 -->
+
+    <link rel="stylesheet" href="index.css" /> <!-- 引入外部樣式檔 -->
+</head>
+
+<body>
+    <!-- =========== ✅ 導覽列區塊（LOGO + 導覽連結）============= -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img"> <!-- 公司LOGO -->
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 手機漢堡選單開關 -->
+            <nav class="menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="engineering-achievements.html">工程事蹟</a></li>
+                    <li><a href="partner.html">合作夥伴</a></li>
+                    <li><a href="about-us.html">關於我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =========== ✅ 輪播圖區塊（三張圖片 + 點點 + 箭頭）============= -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="slide active"><img src="images/title.png" alt="科技圖1"></div> <!-- 第1張輪播圖 -->
+            <div class="slide"><img src="images/introduction.jpg" alt="科技圖2"></div> <!-- 第2張輪播圖 -->
+            <div class="slide"><img src="images/ZY-Gaming-PC.png" alt="科技圖3"></div> <!-- 第3張輪播圖 -->
+
+            <!-- 點點切換 -->
+            <div class="carousel-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+
+        <!-- 左右箭頭切換 -->
+        <button class="arrow left-arrow" onclick="prevSlide()">❮</button> <!-- 上一張 -->
+        <button class="arrow right-arrow" onclick="nextSlide()">❯</button> <!-- 下一張 -->
+    </section>
+
+    <!-- =========== ✅ 產品分類區塊（6 種服務============= -->
+    <section class="categories">
+        <!-- 電競服務區塊 -->
+        <div class="section-header">
+            <h2 class="section-title underline">電競生活事業部</h2>
+        </div>
+
+        <div class="container" style="margin-bottom: 60px;">
+            <div class="category full-width">
+                <!-- ✅ 這行強迫它佔滿整排 -->
+                <a href="gaming-PC.html">
+                    <div class="img-box">
+                        <img src="images/internet.png" alt="電競專區" />
+                    </div>
+                    <h3>電競專區</h3>
+                </a>
+            </div>
+        </div>
+
+        <!-- 核心服務區塊 -->
+        <div class="section-header">
+            <h2 class="section-title underline">商用資訊事業部</h2>
+        </div>
+
+        <div class="container">
+            <div class="category">
+                <a href="network.html">
+                    <div class="img-box">
+                        <img src="images/internet.png" alt="網管設備" />
+                    </div>
+                    <h3>網管設備</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="private-cloud.html">
+                    <div class="img-box">
+                        <img src="images/private.jpg" alt="私有雲端" />
+                    </div>
+                    <h3>私有雲端</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="server.html">
+                    <img src="images/server.jpg" alt="伺服器" />
+                    <h3>伺服器</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="software-systems.html">
+                    <img src="images/erp.png" alt="企業軟體系統" />
+                    <h3>企業軟體系統</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="weak-ennginner.html">
+                    <img src="images/ip.png" alt="弱電工程" />
+                    <h3>弱電工程</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="computer.html">
+                    <img src="images/computer.jpg" alt="電腦設備" />
+                    <h3>電腦設備</h3>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========== ✅ 聯絡資訊 + QR Code + Google 地圖區塊 ============= -->
+    <footer class="footer-info">
+        <div class="container contact-map">
+
+            <!-- 公司聯絡資訊 -->
+            <div class="contact-text">
+                <h3>聯絡我們</h3>
+                <p>公司名稱：贊耀資訊有限公司 ZanYao</p>
+                <p>電話：02-2608-0925</p>
+                <p>Email：service@zanyao.com.tw</p>
+                <p>地址：新北市林口區文化二路一段68巷31號2樓</p>
+            </div>
+
+            <!-- Line 二維碼 -->
+            <div class="line-qr">
+                <img src="images/line-qrcode.jpg" alt="Line QR Code" width="300" height="300">
+            </div>
+
+            <!-- Google 地圖嵌入 -->
+            <div class="contact-map-embed">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.970144211824!2d121.36427087595708!3d25.069001036880195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7b0bfa19b8b%3A0x62c68378f54fbb2f!2z6LSK6ICA6LOH6KiKIC3pgLHlha3poJDntITliLYo5LyB5qWt6LOH5a6J57ay566h5qmf5oi_6Zu76IWm562G6Zu76Zuy56uv5Ly65pyN5Zmo6Luf6auU5byx6Zu757at6K23Luizh-ioiuioreWCmeS-m-aHieWVhi7oqo3orYnlt6XnqIvluKsp!5e0!3m2!1szh-TW!2stw!4v1754199715638!5m2!1szh-TW!2stw"
+                    width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========== ✅ 版權宣告區塊 ============= -->
+    <div class="copyright">
+        © 2025 贊耀資訊有限公司 所有權利均予保留
+    </div>
+
+    <!-- =========== ✅ 輪播功能 JavaScript ============= -->
+    <script>
+        let currentIndex = 0; // 當前輪播圖片索引
+        const slides = document.querySelectorAll('.slide'); // 所有圖片元素
+        const dots = document.querySelectorAll('.dot');     // 所有點點元素
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index); // 顯示對應圖片
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);   // 點點高亮
+            });
+            currentIndex = index; // 更新索引
+        }
+
+        function nextSlide() {
+            const newIndex = (currentIndex + 1) % slides.length; // 循環下一張
+            showSlide(newIndex);
+        }
+
+        function prevSlide() {
+            const newIndex = (currentIndex - 1 + slides.length) % slides.length; // 循環上一張
+            showSlide(newIndex);
+        }
+
+        function goToSlide(index) {
+            showSlide(index); // 直接跳轉到指定張
+        }
+    </script>
+
+    <!-- =========== ✅ 手機版導覽列切換功能 ============= -->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu'); // 選取選單區
+            menu.classList.toggle('open'); // 點一下切換 class: open
+        }
+    </script>
+
+</body>
+
+</html>

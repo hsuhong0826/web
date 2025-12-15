@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-TW"> <!-- 設定語言為繁體中文 -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- 設定字符編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設定，讓畫面適應不同裝置寬度 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 設定瀏覽器頁籤的小圖示（favicon） -->
+    <title>贊耀資訊有限公司</title> <!-- 設定頁面標題，顯示於瀏覽器頁籤 -->
+    <link rel="stylesheet" href="index.css" /> <!-- 引入外部 CSS 樣式表 -->
+</head>
+
+<body> <!-- 網頁主體開始 -->
+
+    <!-- 導覽列區塊 -->
+    <header class="navbar"> <!-- 標頭區塊，含導覽列樣式 -->
+        <div class="container"> <!-- 主容器：控制寬度與內部排列 -->
+
+            <div class="logo"> <!-- Logo 區塊 -->
+                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img">
+                <!-- 顯示公司 Logo 圖片 -->
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 漢堡選單按鈕，手機版使用，點擊會呼叫 toggleMenu() 函式 -->
+
+            <nav class="menu"> <!-- 導覽列區塊 -->
+                <ul class="nav-links"> <!-- 導覽連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering-achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about-us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+
+        </div> <!-- 結束 container -->
+    </header> <!-- 結束導覽列 -->
+
+    <!-- ✅ 第二頁內容區塊 -->
+    <main class="categories-partner"> <!-- 主內容區塊，包含頁面主要內容 -->
+        <div class="section-header">
+            <h1 class="section-title title-partner">合作夥伴</h1>
+        </div>
+        <div class="container">
+            <div class="category">
+                <img src="images/居易.png" alt="居易" />
+                <h3>居易</h3>
+            </div>
+            <div class="category">
+                <img src="images/合勤.png" alt="合勤" />
+                <h3>合勤</h3>
+            </div>
+            <div class="category">
+                <img src="images/群暉.png" alt="群暉" />
+                <h3>群暉</h3>
+            </div>
+            <div class="category">
+                <img src="images/tp-link.png" alt="tp-link" />
+                <h3>tp-link</h3>
+            </div>
+            <div class="category">
+                <img src="images/建達.png" alt="建達" />
+                <h3>建達</h3>
+            </div>
+            <div class="category">
+                <img src="images/展碁.png" alt="展碁" />
+                <h3>展碁</h3>
+            </div>
+            <div class="category">
+                <img src="images/精技.png" alt="精技" />
+                <h3>精技</h3>
+            </div>
+            <div class="category">
+                <img src="images/捷元.png" alt="捷元" />
+                <h3>捷元</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- =========== ✅ 版權宣告區塊 ============= -->
+    <div class="copyright">
+        © 2025 贊耀資訊有限公司 所有權利均予保留
+    </div>
+
+    <!-- JavaScript 區塊：控制漢堡選單開關 -->
+    <script>
+        function toggleMenu() { // 定義 toggleMenu 函式
+            const menu = document.querySelector('.menu'); // 選取 menu 元素
+            menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
+        }
+    </script>
+
+</body> <!-- 結束 body 區塊 -->
+
+</html> <!-- 結束 HTML 文件 -->

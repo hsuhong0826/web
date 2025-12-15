@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-TW"> <!-- 設定語言為繁體中文 -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- 設定字符編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設定，讓畫面適應不同裝置寬度 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 設定瀏覽器頁籤的小圖示（favicon） -->
+    <title>贊耀資訊有限公司</title> <!-- 設定頁面標題，顯示於瀏覽器頁籤 -->
+    <link rel="stylesheet" href="navigation-bar.css" /> <!-- 引入外部 CSS 樣式表 -->
+</head>
+
+<body> <!-- 網頁主體開始 -->
+
+    <!-- 導覽列區塊 -->
+    <header class="navbar"> <!-- 標頭區塊，含導覽列樣式 -->
+        <div class="container"> <!-- 主容器：控制寬度與內部排列 -->
+
+            <div class="logo"> <!-- Logo 區塊 -->
+                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img">
+                <!-- 顯示公司 Logo 圖片 -->
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 漢堡選單按鈕，手機版使用，點擊會呼叫 toggleMenu() 函式 -->
+
+            <nav class="menu"> <!-- 導覽列區塊 -->
+                <ul class="nav-links"> <!-- 導覽連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering-achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about-us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+
+        </div> <!-- 結束 container -->
+    </header> <!-- 結束導覽列 -->
+
+    <!-- ✅ 第二頁內容區塊 -->
+    <main class="container" style="padding: 40px 0;"> <!-- 主內容區塊，包含頁面主要內容 -->
+        <div class="chat-section">
+            <h1 class="section-title">弱電工程</h1>
+
+            <!-- 右圖左文字 -->
+            <div class="message-box right">
+                <h2 class="box-subtitle">總機系統<br class="mobile-break">（Private Branch Exchange）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">總機系統是企業通訊核心，整合市話與內部分機通話，具備自動總機語音、來電轉接、撥號分機、語音信箱等功能。
+                    透過IP或數位交換機，可連結多點辦公室，降低通訊成本並提升服務效率，是企業內外聯繫的重要後勤支援。</div>
+            </div>
+
+            <!-- 左圖右文字 -->
+            <div class="message-box left">
+                <h2 class="box-subtitle">監控系統<br class="mobile-break">（Closed Circuit Television）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">監控系統提供即時影像監控與錄影功能，透過高解析度網路攝影機、NVR 錄影主機與遠端觀看技術，能保障人員與資產安全。
+                    廣泛應用於大樓出入口、停車場、廠區、辦公室等場所，亦可與警報系統整合，實現智慧化安防管理。</div>
+            </div>
+
+            <div class="message-box right">
+                <h2 class="box-subtitle">門禁系統<br class="mobile-break">（Access Control System）</h2>
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">門禁系統管理人員進出權限，支援感應卡、密碼、指紋、人臉辨識等多種認證方式。
+                    可設定時段限制、紀錄出入時間，並與考勤系統整合，提升人員管理效率與區域安全性，常見於企業辦公室、機房、宿舍、實驗室等重點區域。</div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- JavaScript 區塊：控制漢堡選單開關 -->
+    <script>
+        function toggleMenu() { // 定義 toggleMenu 函式
+            const menu = document.querySelector('.menu'); // 選取 menu 元素
+            menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
+        }
+    </script>
+    <div class="copyright"> <!-- 設定版權區 -->
+        © 2025 贊耀資訊有限公司 所有權利均予保留 <!-- 版權文字 -->
+    </div>
+
+</body> <!-- 結束 body 區塊 -->
+
+</html> <!-- 結束 HTML 文件 -->
