@@ -17,7 +17,7 @@ body {
 body {
     font-family: "Segoe UI", sans-serif;
     /* 設定全站字型 */
-    background: #1e1d1d;
+    background: #000000;
     /* 設定網頁背景色 */
     color: #fffbfb;
     /* 預設文字顏色 */
@@ -225,9 +225,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.message-box.left {
-    flex-direction: row;
-}
+
 
 .message-box.right {
     flex-direction: row-reverse;
@@ -266,77 +264,7 @@ body {
     /* ✅ 無圓角（保留方形外觀） */
 }
 
-.bubble {
-    margin-top: 40px;
-    width: 700px;
-    /* ✅ 寬度 */
-    min-height: 200px;
-    /* ✅ 改為最小高度 */
-    height: auto;
-    /* ✅ 高度自動 */
-    background-color: #fff;
-    padding: 18px 24px;
-    border-radius: 20px;
-    font-size: 22px;
-    max-width: 100%;
-    /* ✅ 讓對話框也能隨容器縮小 */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    text-align: justify;
-}
 
-.message-box.left .bubble::before {
-    content: "";
-    position: absolute;
-    left: -22px;
-    top: 30px;
-    width: 0;
-    height: 0;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
-    border-right: 22px solid #ccc;
-    /* 外層「邊框」顏色 */
-}
-
-.message-box.left .bubble::after {
-    content: "";
-    position: absolute;
-    left: -20px;
-    /* 相對略靠內，形成邊框效果 */
-    top: 30px;
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right: 20px solid #fff;
-    /* 泡泡背景色 */
-}
-
-.message-box.right .bubble::before {
-    content: "";
-    position: absolute;
-    right: -22px;
-    top: 30px;
-    width: 0;
-    height: 0;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
-    border-left: 22px solid #ccc;
-    /* 外層邊框色 */
-}
-
-.message-box.right .bubble::after {
-    content: "";
-    position: absolute;
-    right: -20px;
-    top: 30px;
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 20px solid #fff;
-    /* 泡泡背景色 */
-}
 
 .message-box .content-box {
     display: flex;
@@ -367,155 +295,12 @@ body {
     /* ⬅️ 可選：讓點點變成紅色 */
 }
 
-/* ========= 頁尾區塊 ========= */
-footer {
-    background: #222;
-    /* 背景深灰 */
-    color: white;
-    /* 白字 */
-    text-align: left;
-    /* 左對齊 */
-    padding: 20px;
-    /* 內距 */
-    margin-top: 30px;
-    /* 上方間距 */
-}
 
-.footer-info {
-    background: #002244;
-    /* 更深背景 */
-    color: #fff;
-    /* 白字 */
-    padding: 20px;
-    /* 內距 */
-    margin-top: 10px;
-    /* ✅ 確保本身無額外 margin */
-    border-top: 1px solid #111;
-    /* ✅ 加上邊框避免白縫視覺 */
-}
-
-/* ========= 聯絡資訊 + 地圖區塊 ========= */
-.contact-map {
-    display: flex;
-    /* 使用 Flex 排版 */
-    flex-wrap: wrap;
-    /* 換行 */
-    justify-content: space-between;
-    /* 分佈對齊 */
-    gap: 50px;
-    /* 間距 */
-    align-items: flex-start;
-    /* 靠上對齊 */
-}
-
-.contact-text {
-    flex: 1 1 300px;
-    /* 占據寬度且可換行 */
-    min-width: 250px;
-    /* 最小寬度 */
-    text-align: left;
-    /* 左對齊 */
-    align-self: center;
-    /* 垂直置中 */
-    padding-left: 25px;
-    /* 靠右一點 */
-}
-
-.contact-text h3 {
-    margin-bottom: 15px;
-    /* 標題下方間距 */
-    font-size: 22px;
-    /* 標題字大小 */
-    color: #fff;
-    /* 白色 */
-}
-
-.contact-text p {
-    margin-bottom: 8px;
-    /* 段落下間距 */
-    font-size: 18px;
-    /* 字體大小 */
-    color: #ccc;
-    /* 灰色文字 */
-}
-
-/* ========= 社群媒體圖示 ========= */
-.social-links {
-    margin-top: 15px;
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: translateY(-3px);
-}
-
-.social-icon.ig:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-.social-icon.fb:hover {
-    background-color: #1877F2;
-}
-
-.social-icon.threads:hover {
-    background-color: #000000;
-    border: 1px solid #333;
-}
-
-.social-icon.youtube:hover {
-    background-color: #FF0000;
-}
-
-.line-qr {
-    position: relative;
-    /* 相對定位 */
-    left: 50px;
-    /* 靠左 */
-}
-
-.contact-map-embed {
-    flex: 1 1 300px;
-    /* 寬度設定 */
-    min-width: 300px;
-    /* 最小寬度 */
-    max-width: 400px;
-    /* 最大寬度 */
-    position: relative;
-    /* 相對定位 */
-    left: 70px;
-    /* 靠左 */
-}
-
-.contact-map-embed iframe {
-    width: 300px;
-    height: 300px;
-    aspect-ratio: 1 / 1;
-    /* 寬高比 */
-    border: 0;
-    /* 無邊框 */
-}
 
 /* ========= 版權區塊 ========= */
 .copyright {
     background-color: #000000;
-    /* 白底 */
     color: #ffffff;
-    /* 字色深灰 */
     text-align: center;
     /* 置中對齊 */
     font-size: 14px;
@@ -624,16 +409,7 @@ footer {
         /* 左側距離，可依需求調整 */
     }
 
-    .navbar .container {
-        flex-direction: row;
-        /* 主容器維持橫向排列 */
-        justify-content: space-between;
-        /* 左右兩端對齊 */
-    }
-}
-
-/* ========= 響應式設計 ========= */
-@media (max-width: 768px) {
+    /* Merged from Block 2 */
     .navbar .container {
         flex-direction: column;
         /* 導覽列主容器改為直向排列 */
@@ -672,13 +448,7 @@ footer {
         margin-top: 6px;
     }
 
-    .avatar-box {
-        margin-top: 60px;
-    }
-}
-
-/* ========= 響應式：留言區調整 ========= */
-@media (max-width: 768px) {
+    /* Merged from Block 3 */
     .chat-section {
         padding: 30px 10px;
         gap: 50px;
@@ -736,33 +506,13 @@ footer {
         margin-top: 0;
         margin-bottom: 15px;
     }
-
-    .bubble {
-        width: 100%;
-        max-width: 100%;
-        font-size: 18px;
-        height: auto;
-        margin-top: 0px;
-    }
-
-    .message-box.left .bubble::before,
-    .message-box.left .bubble::after,
-    .message-box.right .bubble::before,
-    .message-box.right .bubble::after {
-        display: none;
-    }
 }
 
-/* Mobile Break Utility */
-.mobile-break {
-    display: none;
-}
 
-@media (max-width: 768px) {
-    .mobile-break {
-        display: block;
-    }
-}
+
+
+
+
 
 /* ========= 回到頂部按鈕 ========= */
 #backToTopBtn {

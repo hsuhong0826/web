@@ -6,7 +6,7 @@
     <meta charset="UTF-8" /> <!-- 設定編碼為 UTF-8，支援中文 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設計：適應不同裝置 -->
 
-    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 頁籤左側小圖示 -->
+    <link rel="icon" href="images/icon/LOGOB1.png" type="image/png"> <!-- 頁籤左側小圖示 -->
     <title>贊耀資訊有限公司</title> <!-- 頁面標題 -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -19,7 +19,7 @@
     <header class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="images/LOGOW3.png" alt="公司Logo" class="logo-img"> <!-- 公司LOGO -->
+                <img src="images/zanyao/LOGOW3.png" alt="公司Logo" class="logo-img"> <!-- 公司LOGO -->
             </div>
             <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 手機漢堡選單開關 -->
             <nav class="menu">
@@ -36,9 +36,9 @@
     <!-- =========== ✅ 輪播圖區塊（三張圖片 + 點點 + 箭頭）============= -->
     <section class="carousel">
         <div class="carousel-container">
-            <div class="slide active"><img src="images/ZY-Gaming-PC.png" alt="科技圖1"></div> <!-- 第1張輪播圖 -->
-            <div class="slide"><img src="images/ZY-Gaming-PC.png" alt="科技圖2"></div> <!-- 第2張輪播圖 -->
-            <div class="slide"><img src="images/ZY-Gaming-PC.png" alt="科技圖3"></div> <!-- 第3張輪播圖 -->
+            <div class="slide active"><img src="images/zanyao/ZY-Gaming-PC.png" alt="科技圖1"></div> <!-- 第1張輪播圖 -->
+            <div class="slide"><img src="images/zanyao/ZY-Gaming-PC.png" alt="科技圖2"></div> <!-- 第2張輪播圖 -->
+            <div class="slide"><img src="images/zanyao/ZY-Gaming-PC.png" alt="科技圖3"></div> <!-- 第3張輪播圖 -->
 
             <!-- 點點切換 -->
             <div class="carousel-dots">
@@ -65,9 +65,8 @@
                 <!-- ✅ 這行強迫它佔滿整排 -->
                 <a href="gaming-PC.html">
                     <div class="img-box">
-                        <img src="images/gaming2.jpg" alt="電競專區" />
+                        <img src="images/index-image/gaming.jpg" alt="電競專區" />
                     </div>
-                    <h3>電競專區</h3>
                 </a>
             </div>
         </div>
@@ -81,7 +80,7 @@
             <div class="category">
                 <a href="network.html">
                     <div class="img-box">
-                        <img src="images/internet.png" alt="網管設備" />
+                        <img src="images/index-image/internet.png" alt="網管設備" />
                     </div>
                     <h3>網管設備</h3>
                 </a>
@@ -90,7 +89,7 @@
             <div class="category">
                 <a href="private-cloud.html">
                     <div class="img-box">
-                        <img src="images/private.jpg" alt="私有雲端" />
+                        <img src="images/index-image/private.jpg" alt="私有雲端" />
                     </div>
                     <h3>私有雲端</h3>
                 </a>
@@ -98,7 +97,7 @@
 
             <div class="category">
                 <a href="server.html">
-                    <img src="images/server.jpg" alt="伺服器" />
+                    <img src="images/index-image/server.jpg" alt="伺服器" />
                     <h3>伺服器</h3>
                 </a>
             </div>
@@ -112,14 +111,14 @@
 
             <div class="category">
                 <a href="weak-ennginner.html">
-                    <img src="images/ip.png" alt="弱電工程" />
+                    <img src="images/index-image/ip.png" alt="弱電工程" />
                     <h3>弱電工程</h3>
                 </a>
             </div>
 
             <div class="category">
                 <a href="computer.html">
-                    <img src="images/computer.jpg" alt="電腦設備" />
+                    <img src="images/index-image/computer.jpg" alt="電腦設備" />
                     <h3>電腦設備</h3>
                 </a>
             </div>
@@ -154,7 +153,7 @@
 
             <!-- Line 二維碼 -->
             <div class="line-qr">
-                <img src="images/line-qrcode.jpg" alt="Line QR Code" width="300" height="300">
+                <img src="images/zanyao/line-qrcode.jpg" alt="Line QR Code" width="300" height="300">
             </div>
 
             <!-- Google 地圖嵌入 -->
@@ -178,8 +177,9 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- =========== ✅ 輪播功能 JavaScript ============= -->
+    <!-- =========== ✅ 輪播功能與互動 JavaScript ============= -->
     <script>
+        // --- 輪播圖功能 ---
         let currentIndex = 0; // 當前輪播圖片索引
         const slides = document.querySelectorAll('.slide'); // 所有圖片元素
         const dots = document.querySelectorAll('.dot');     // 所有點點元素
@@ -208,7 +208,7 @@
             showSlide(index); // 直接跳轉到指定張
         }
 
-        // 回到頂部按鈕功能
+        // --- 回到頂部按鈕功能 ---
         let mybutton = document.getElementById("backToTopBtn");
 
         window.onscroll = function () { scrollFunction() };
@@ -224,16 +224,13 @@
         function topFunction() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    </script>
 
-    <!-- =========== ✅ 手機版導覽列切換功能 ============= -->
-    <script>
+        // --- 手機版導覽列切換功能 ---
         function toggleMenu() {
             const menu = document.querySelector('.menu'); // 選取選單區
             menu.classList.toggle('open'); // 點一下切換 class: open
         }
     </script>
-
 </body>
 
 </html>

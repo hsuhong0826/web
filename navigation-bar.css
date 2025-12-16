@@ -355,6 +355,51 @@ body {
     /* 導覽選單預設為顯示 */
 }
 
+/* Mobile Break Utility */
+.mobile-break {
+    display: none;
+}
+
+/* ========= 回到頂部按鈕 ========= */
+#backToTopBtn {
+    display: none;
+    /* 預設隱藏 */
+    position: fixed;
+    /* 固定位置 */
+    bottom: 20px;
+    /* 距離底部 20px */
+    right: 30px;
+    /* 距離右邊 30px */
+    z-index: 99;
+    /* 確保在最上層 */
+    border: none;
+    /* 無邊框 */
+    outline: none;
+    /* 無輪廓 */
+    background-color: #002244;
+    /* 背景色 */
+    color: white;
+    /* 文字顏色 */
+    cursor: pointer;
+    /* 游標變手指 */
+    padding: 15px;
+    /* 內距 */
+    border-radius: 50%;
+    /* 圓形 */
+    font-size: 18px;
+    /* 字體大小 */
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #00bfff;
+    /* 懸停變色 */
+    transform: translateY(-3px);
+}
+
 /* ========= 響應式設計：手機版樣式 ========= */
 @media (max-width: 768px) {
     .logo-img {
@@ -417,16 +462,7 @@ body {
         /* 左側距離，可依需求調整 */
     }
 
-    .navbar .container {
-        flex-direction: row;
-        /* 主容器維持橫向排列 */
-        justify-content: space-between;
-        /* 左右兩端對齊 */
-    }
-}
-
-/* ========= 響應式設計 ========= */
-@media (max-width: 768px) {
+    /* Merged from Block 2 */
     .navbar .container {
         flex-direction: column;
         /* 導覽列主容器改為直向排列 */
@@ -455,13 +491,7 @@ body {
         margin-top: 6px;
     }
 
-    .avatar-box {
-        margin-top: 60px;
-    }
-}
-
-/* ========= 響應式：留言區調整 ========= */
-@media (max-width: 768px) {
+    /* Merged from Block 3 */
     .chat-section {
         padding: 30px 10px;
         gap: 50px;
@@ -515,54 +545,8 @@ body {
     .message-box.right .bubble::after {
         display: none;
     }
-}
 
-/* ========= 回到頂部按鈕 ========= */
-#backToTopBtn {
-    display: none;
-    /* 預設隱藏 */
-    position: fixed;
-    /* 固定位置 */
-    bottom: 20px;
-    /* 距離底部 20px */
-    right: 30px;
-    /* 距離右邊 30px */
-    z-index: 99;
-    /* 確保在最上層 */
-    border: none;
-    /* 無邊框 */
-    outline: none;
-    /* 無輪廓 */
-    background-color: #002244;
-    /* 背景色 */
-    color: white;
-    /* 文字顏色 */
-    cursor: pointer;
-    /* 游標變手指 */
-    padding: 15px;
-    /* 內距 */
-    border-radius: 50%;
-    /* 圓形 */
-    font-size: 18px;
-    /* 字體大小 */
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#backToTopBtn:hover {
-    background-color: #00bfff;
-    /* 懸停變色 */
-    transform: translateY(-3px);
-}
-
-/* Mobile Break Utility */
-.mobile-break {
-    display: none;
-}
-
-@media (max-width: 768px) {
+    /* Merged from Block 4 */
     .mobile-break {
         display: block;
     }

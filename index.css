@@ -122,6 +122,37 @@ body {
     /* 滑鼠懸停變藍色 */
 }
 
+/* ========= 漢堡選單樣式 (預設桌面版) ========= */
+.menu-toggle {
+    display: none;
+    /* 預設不顯示，僅在手機版顯示 */
+    font-size: 32px;
+    /* 漢堡圖示大小 */
+    color: white;
+    /* 圖示顏色白色 */
+    cursor: pointer;
+    /* 游標為手指形狀 */
+    padding: 10px 20px;
+    /* 內距 */
+    position: absolute;
+    /* 絕對定位 */
+    right: 0;
+    /* 貼齊右邊 */
+    top: 50%;
+    /* 垂直置中 */
+    transform: translateY(-50%);
+    /* 微調垂直置中 */
+    z-index: 1001;
+    /* 層級比 menu 高 */
+    background: transparent;
+    /* 背景透明 */
+}
+
+.menu {
+    display: block;
+    /* 桌面版預設顯示選單 */
+}
+
 /* ========= 輪播圖區塊 ========= */
 .carousel {
     width: 100%;
@@ -322,6 +353,13 @@ body {
 .category.full-width {
     flex: 1 1 100%;
     max-width: 100%;
+    background: transparent;
+    padding: 0;
+}
+
+.category.full-width img {
+    height: auto;
+    object-fit: cover;
 }
 
 .category img {
@@ -370,10 +408,6 @@ body {
     object-fit: contain;
     display: block;
     margin: 10px auto;
-    border-radius: 6px;
-    /* 圓角 */
-    margin-top: 10px;
-    /* 與標題間距 */
 }
 
 .category a {
@@ -393,24 +427,13 @@ body {
 }
 
 /* ========= 頁尾區塊 ========= */
-footer {
-    background: #222;
-    /* 背景深灰 */
-    color: white;
-    /* 白字 */
-    text-align: left;
-    /* 左對齊 */
-    padding: 20px;
-    /* 內距 */
-    margin-top: 30px;
-    /* 上方間距 */
-}
-
 .footer-info {
     background: #002244;
     /* 更深背景 */
     color: #fff;
     /* 白字 */
+    text-align: left;
+    /* 左對齊 */
     padding: 20px;
     /* 內距 */
     margin-top: 10px;
@@ -549,36 +572,7 @@ footer {
     /* 上下內距 */
 }
 
-/* ========= 漢堡選單樣式 ========= */
-.menu-toggle {
-    display: none;
-    /* 預設不顯示，僅在手機版顯示 */
-    font-size: 32px;
-    /* 漢堡圖示大小 */
-    color: white;
-    /* 圖示顏色白色 */
-    cursor: pointer;
-    /* 游標為手指形狀 */
-    padding: 10px 20px;
-    /* 內距 */
-    position: absolute;
-    /* 絕對定位 */
-    right: 0;
-    /* 貼齊右邊 */
-    top: 50%;
-    /* 垂直置中 */
-    transform: translateY(-50%);
-    /* 微調垂直置中 */
-    z-index: 1001;
-    /* 層級比 menu 高 */
-    background: transparent;
-    /* 背景透明 */
-}
 
-.menu {
-    display: block;
-    /* 桌面版預設顯示選單 */
-}
 
 /* ========= 回到頂部按鈕 ========= */
 #backToTopBtn {
