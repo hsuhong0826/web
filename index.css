@@ -136,7 +136,7 @@ body {
     width: 100%;
     /* 滿寬 */
     height: 100%;
-    /* 滿高 */
+    /* 滿版高度 */
     position: relative;
     /* 相對定位給 slide 用 */
 }
@@ -173,7 +173,7 @@ body {
 .carousel-dots {
     position: absolute;
     /* 絕對定位於底部 */
-    bottom: 15px;
+    bottom: 5px;
     /* 底部往上 15px */
     width: 100%;
     /* 滿版寬度 */
@@ -184,9 +184,9 @@ body {
 }
 
 .dot {
-    height: 10px;
+    height: 8px;
     /* 圓點高 */
-    width: 10px;
+    width: 8px;
     /* 圓點寬 */
     margin: 0 5px;
     /* 圓點間距 */
@@ -203,7 +203,7 @@ body {
 }
 
 .dot.active {
-    background-color: #969696;
+    background-color: #ffffff;
     /* 選中時為亮白 */
 }
 
@@ -464,6 +464,48 @@ footer {
     /* 灰色文字 */
 }
 
+/* ========= 社群媒體圖示 ========= */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon.ig:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-icon.fb:hover {
+    background-color: #1877F2;
+}
+
+.social-icon.threads:hover {
+    background-color: #000000;
+    border: 1px solid #333;
+}
+
+.social-icon.youtube:hover {
+    background-color: #FF0000;
+}
+
 .line-qr {
     position: relative;
     /* 相對定位 */
@@ -536,6 +578,46 @@ footer {
 .menu {
     display: block;
     /* 桌面版預設顯示選單 */
+}
+
+/* ========= 回到頂部按鈕 ========= */
+#backToTopBtn {
+    display: none;
+    /* 預設隱藏 */
+    position: fixed;
+    /* 固定位置 */
+    bottom: 20px;
+    /* 距離底部 20px */
+    right: 30px;
+    /* 距離右邊 30px */
+    z-index: 99;
+    /* 確保在最上層 */
+    border: none;
+    /* 無邊框 */
+    outline: none;
+    /* 無輪廓 */
+    background-color: #002244;
+    /* 背景色 */
+    color: white;
+    /* 文字顏色 */
+    cursor: pointer;
+    /* 游標變手指 */
+    padding: 15px;
+    /* 內距 */
+    border-radius: 50%;
+    /* 圓形 */
+    font-size: 18px;
+    /* 字體大小 */
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #00bfff;
+    /* 懸停變色 */
+    transform: translateY(-3px);
 }
 
 /* ========= 響應式設計 ========= */
@@ -619,8 +701,13 @@ footer {
     }
 
     /* Contact Map */
+    .contact-map {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .contact-text {
-        padding-top: 15px;
+        padding-top: 40px;
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 0px;
@@ -695,7 +782,7 @@ footer {
 
     .section-header {
         text-align: center;
-        margin: 30px 0 30px 0;
+        margin: 5px 0 0 0;
     }
 
     .categories-partner .container {

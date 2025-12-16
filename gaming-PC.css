@@ -175,8 +175,10 @@ body {
 
 .box-subtitle {
     position: absolute;
-    top: 15px;
-    left: 30px;
+    top: 25px;
+    /* ✅ 調整標題位置 */
+    left: 40px;
+    /* ✅ 調整左側距離 */
     font-size: 36px;
     font-weight: 600;
     color: #1e3a5f;
@@ -203,8 +205,13 @@ body {
 .message-box {
     position: relative;
     /* ✅ 讓內部小標題可以定位 */
-    width: 1400px;
-    height: 420px;
+    width: 1300px;
+    max-width: 85vw;
+    /* ✅ 加上最大寬度限制 (視窗寬度的 85%)，讓它在檢查視窗開啟時能自動縮小，但平常保持 1300px */
+    min-height: 450px;
+    /* ✅ 改為最小高度，避免縮小後內容被切掉 */
+    height: auto;
+    /* ✅ 高度自動調整 */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -213,7 +220,8 @@ body {
     /* ✅ 設定圖片與 bubble 間距 */
     background-color: #eee;
     border-radius: 0px;
-    padding: 30px;
+    padding: 90px 40px 40px 40px;
+    /* ✅ 上方留白 90px 給標題，避免重疊 */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -226,25 +234,25 @@ body {
 }
 
 .avatar-box {
-    width: 230px;
+    width: 280px;
     /* ✅ 外框寬度 */
-    height: 230px;
+    height: 280px;
     /* ✅ 外框高度 */
-    background-color: white;
-    /* ✅ 背景白色，讓圖片底透明區不會透出底色 */
-    border: 2px solid #ccc;
-    /* ✅ 灰色邊框 */
+    background-color: transparent;
+    /* ✅ 改為透明，去除白底 */
+    border: none;
+    /* ✅ 移除邊框 */
     display: flex;
     /* ✅ 使用 flex，讓圖片置中 */
     align-items: center;
     /* ✅ 垂直置中 */
     justify-content: center;
     /* ✅ 水平置中 */
-    margin: 40px 2px 0 2px;
+    margin: 0px 2px 0 2px;
     /* ⬅️ 上右下左，圖片往下推 */
     /* ✅ 左右間距 20px，讓圖片與對話框有空隙 */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    /* ✅ 加上陰影讓框更立體 */
+    box-shadow: none;
+    /* ✅ 移除陰影 */
 }
 
 .avatar {
@@ -262,13 +270,16 @@ body {
     margin-top: 40px;
     width: 700px;
     /* ✅ 寬度 */
-    height: 200px;
-    /* ✅ 高度 */
+    min-height: 200px;
+    /* ✅ 改為最小高度 */
+    height: auto;
+    /* ✅ 高度自動 */
     background-color: #fff;
     padding: 18px 24px;
     border-radius: 20px;
     font-size: 22px;
-    max-width: 700px;
+    max-width: 100%;
+    /* ✅ 讓對話框也能隨容器縮小 */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: justify;
@@ -426,6 +437,48 @@ footer {
     /* 字體大小 */
     color: #ccc;
     /* 灰色文字 */
+}
+
+/* ========= 社群媒體圖示 ========= */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon.ig:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-icon.fb:hover {
+    background-color: #1877F2;
+}
+
+.social-icon.threads:hover {
+    background-color: #000000;
+    border: 1px solid #333;
+}
+
+.social-icon.youtube:hover {
+    background-color: #FF0000;
 }
 
 .line-qr {
@@ -600,12 +653,17 @@ footer {
     }
 
     .section-title {
-        font-size: 30px;
-        letter-spacing: 10px;
+        font-size: 50px;
+        /* ✅ 手機版字體加大 */
+        letter-spacing: 15px;
         /* ✅ 手機版縮小字距 */
-        margin: 20px 0;
+        text-indent: 15px;
+        /* ✅ 增加縮排以平衡字距，解決偏左問題 */
+        margin: 40px 0;
         /* ✅ 調整間距 */
         text-align: center;
+        width: 100%;
+        /* ✅ 確保寬度滿版 */
     }
 
     .section-title::after {
@@ -704,4 +762,44 @@ footer {
     .mobile-break {
         display: block;
     }
+}
+
+/* ========= 回到頂部按鈕 ========= */
+#backToTopBtn {
+    display: none;
+    /* 預設隱藏 */
+    position: fixed;
+    /* 固定位置 */
+    bottom: 20px;
+    /* 距離底部 20px */
+    right: 30px;
+    /* 距離右邊 30px */
+    z-index: 99;
+    /* 確保在最上層 */
+    border: none;
+    /* 無邊框 */
+    outline: none;
+    /* 無輪廓 */
+    background-color: #ff0000;
+    /* 背景色 */
+    color: white;
+    /* 文字顏色 */
+    cursor: pointer;
+    /* 游標變手指 */
+    padding: 15px;
+    /* 內距 */
+    border-radius: 50%;
+    /* 圓形 */
+    font-size: 18px;
+    /* 字體大小 */
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #ff0000;
+    /* 懸停變色 */
+    transform: translateY(-3px);
 }

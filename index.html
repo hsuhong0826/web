@@ -9,6 +9,8 @@
     <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 頁籤左側小圖示 -->
     <title>贊耀資訊有限公司</title> <!-- 頁面標題 -->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 引入 Font Awesome 圖示庫 -->
     <link rel="stylesheet" href="index.css" /> <!-- 引入外部樣式檔 -->
 </head>
 
@@ -34,8 +36,8 @@
     <!-- =========== ✅ 輪播圖區塊（三張圖片 + 點點 + 箭頭）============= -->
     <section class="carousel">
         <div class="carousel-container">
-            <div class="slide active"><img src="images/title.png" alt="科技圖1"></div> <!-- 第1張輪播圖 -->
-            <div class="slide"><img src="images/introduction.jpg" alt="科技圖2"></div> <!-- 第2張輪播圖 -->
+            <div class="slide active"><img src="images/ZY-Gaming-PC.png" alt="科技圖1"></div> <!-- 第1張輪播圖 -->
+            <div class="slide"><img src="images/ZY-Gaming-PC.png" alt="科技圖2"></div> <!-- 第2張輪播圖 -->
             <div class="slide"><img src="images/ZY-Gaming-PC.png" alt="科技圖3"></div> <!-- 第3張輪播圖 -->
 
             <!-- 點點切換 -->
@@ -63,7 +65,7 @@
                 <!-- ✅ 這行強迫它佔滿整排 -->
                 <a href="gaming-PC.html">
                     <div class="img-box">
-                        <img src="images/internet.png" alt="電競專區" />
+                        <img src="images/gaming2.jpg" alt="電競專區" />
                     </div>
                     <h3>電競專區</h3>
                 </a>
@@ -136,6 +138,18 @@
                 <p>電話：02-2608-0925</p>
                 <p>Email：service@zanyao.com.tw</p>
                 <p>地址：新北市林口區文化二路一段68巷31號2樓</p>
+
+                <!-- 社群媒體連結 -->
+                <div class="social-links">
+                    <a href="https://www.instagram.com/zanyaoytech?igsh=MTQycmVveGNnMXN2OA==" target="_blank"
+                        class="social-icon ig"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1EvjEYLEr5/?mibextid=wwXIfr" target="_blank"
+                        class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.threads.com/zanyaoytech?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
+                        class="social-icon threads"><i class="fa-brands fa-threads"></i></a>
+                    <a href="https://www.youtube.com/@ZanYaoTechZYGaming" target="_blank" class="social-icon youtube"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
             </div>
 
             <!-- Line 二維碼 -->
@@ -158,6 +172,11 @@
     <div class="copyright">
         © 2025 贊耀資訊有限公司 所有權利均予保留
     </div>
+
+    <!-- 回到頂部按鈕 -->
+    <button onclick="topFunction()" id="backToTopBtn" title="回到頂部">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- =========== ✅ 輪播功能 JavaScript ============= -->
     <script>
@@ -187,6 +206,23 @@
 
         function goToSlide(index) {
             showSlide(index); // 直接跳轉到指定張
+        }
+
+        // 回到頂部按鈕功能
+        let mybutton = document.getElementById("backToTopBtn");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 
