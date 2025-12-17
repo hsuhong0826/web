@@ -181,9 +181,9 @@ body {
     /* ✅ 調整左側距離 */
     font-size: 36px;
     font-weight: 600;
-    color: #1e3a5f;
-    border-left: 6px solid #1e3a5f;
-    padding-left: 12px;
+    color: #ff0000;
+    border-left: 6px solid #ff0000;
+    padding-left: 13px;
     background-color: transparent;
 }
 
@@ -220,8 +220,8 @@ body {
     /* ✅ 設定圖片與 bubble 間距 */
     background-color: #eee;
     border-radius: 0px;
-    padding: 90px 40px 40px 40px;
-    /* ✅ 上方留白 90px 給標題，避免重疊 */
+    padding: 100px 40px 40px 40px;
+    /* ✅ 上方留白加大至 110px，增加標題與選單距離 */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -276,26 +276,81 @@ body {
     /* ✅ 空隙 */
 }
 
+/* ========= 規格列表優化 ========= */
 .spec-list {
     margin: 0;
-    padding-left: 30px;
-    /* 左側縮排讓點點不會貼齊 */
-    color: #000000;
-    font-size: 20px;
-    line-height: 1.5;
-    list-style-type: disc;
-    /* ✅ 顯示點點 */
+    padding: 0;
+    list-style: none;
+    /* 移除預設圓點 */
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* 項目間距 */
 }
 
-.spec-list li::marker {
-    font-size: 20px;
-    /* ✅ 點點變大！ */
-    color: #000000;
-    /* ⬅️ 可選：讓點點變成紅色 */
+.spec-list li {
+    background-color: #ffffff;
+    /* 白底卡片 */
+    padding: 10px 15px;
+    padding-left: 20px;
+    /* 左側留白給裝飾線 */
+    border-radius: 6px;
+    /* 圓角 */
+    font-size: 16px;
+    /* 調整字體大小，提升閱讀性 */
+    line-height: 1.4;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* 輕微陰影 */
+    position: relative;
+    transition: all 0.2s ease;
 }
 
+/* 左側裝飾線 */
+.spec-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #1e3a5f;
+    /* 使用品牌深藍色 */
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
 
+/* 懸停效果 */
+.spec-list li:hover {
+    transform: translateX(5px);
+    /* 輕微右移 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fcfcfc;
+}
+
+/* 重點文字樣式 */
+.spec-list li strong {
+    color: #003366;
+    /* 深藍色強調 */
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 1.1em;
+    display: block;
+    /* 手機版強制換行 */
+}
+
+.spec-list li .highlight-red {
+    color: #e60000;
+    /* 紅色警示 */
+    font-weight: bold;
+}
+
+.spec-list li .highlight-price {
+    color: #d32f2f;
+    font-weight: bold;
+    float: right;
+}
 
 /* ========= 版權區塊 ========= */
 .copyright {
@@ -313,6 +368,44 @@ body {
 .navbar .nav-links li a:hover {
     color: #00bfff;
     /* 懸停時變成亮藍色 */
+}
+
+/* ========= 收合功能樣式 ========= */
+.spec-details {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    color: #333;
+    font-weight: bold;
+    /* ✅ 字體改為 bold (更粗) */
+    font-size: 1em;
+    /* ✅ 字體稍微加大 */
+    line-height: 1.6;
+    animation: slideDown 0.3s ease-out;
+}
+
+.spec-list li.active .spec-details {
+    display: block;
+}
+
+.toggle-icon {
+    margin-left: auto;
+    padding-left: 10px;
+    color: #000000;
+    font-size: 0.9em;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ========= 響應式：漢堡選單按鈕 ========= */
@@ -435,7 +528,7 @@ body {
         /* ✅ 手機版縮小字距 */
         text-indent: 15px;
         /* ✅ 增加縮排以平衡字距，解決偏左問題 */
-        margin: 40px 0;
+        margin: 10px 0;
         /* ✅ 調整間距 */
         text-align: center;
         width: 100%;
@@ -478,6 +571,8 @@ body {
         padding-left: 0;
         padding-bottom: 10px;
         margin-bottom: 10px;
+        font-size: 24px;
+        /* ✅ 手機版字體縮小 */
     }
 
     .message-box .content-box {
@@ -494,8 +589,15 @@ body {
         /* ✅ 文字在上方 */
         width: 100%;
         /* ✅ 寬度滿版 */
-        padding-left: 20px;
-        /* ✅ 調整內距 */
+        padding-left: 0;
+        /* ✅ 移除內距 */
+    }
+
+    .spec-list li {
+        font-size: 12px;
+        /* 手機版字體稍小 */
+        padding: 10px 12px;
+        padding-left: 18px;
     }
 
     .avatar-box {
@@ -508,11 +610,137 @@ body {
     }
 }
 
+/* ========= 頁尾區塊 ========= */
+.footer-info {
+    background: #002244;
+    /* 更深背景 */
+    color: #fff;
+    /* 白字 */
+    text-align: left;
+    /* 左對齊 */
+    padding: 20px;
+    /* 內距 */
+    margin-top: 10px;
+    /* ✅ 確保本身無額外 margin */
+    border-top: 1px solid #111;
+    /* ✅ 加上邊框避免白縫視覺 */
+}
 
+/* ========= 聯絡資訊 + 地圖區塊 ========= */
+.contact-map {
+    display: flex;
+    /* 使用 Flex 排版 */
+    flex-wrap: wrap;
+    /* 換行 */
+    justify-content: space-between;
+    /* 分佈對齊 */
+    gap: 50px;
+    /* 間距 */
+    align-items: flex-start;
+    /* 靠上對齊 */
+}
 
+.contact-text {
+    flex: 1 1 300px;
+    /* 占據寬度且可換行 */
+    min-width: 250px;
+    /* 最小寬度 */
+    text-align: left;
+    /* 左對齊 */
+    align-self: center;
+    /* 垂直置中 */
+    padding-left: 25px;
+    /* 靠右一點 */
+}
 
+.contact-text h3 {
+    margin-bottom: 15px;
+    /* 標題下方間距 */
+    font-size: 22px;
+    /* 標題字大小 */
+    color: #fff;
+    /* 白色 */
+}
 
+.contact-text p {
+    margin-bottom: 8px;
+    /* 段落下間距 */
+    font-size: 18px;
+    /* 字體大小 */
+    color: #ccc;
+    /* 灰色文字 */
+}
 
+/* ========= 社群媒體圖示 ========= */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon.ig:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-icon.fb:hover {
+    background-color: #1877F2;
+}
+
+.social-icon.threads:hover {
+    background-color: #000000;
+    border: 1px solid #333;
+}
+
+.social-icon.youtube:hover {
+    background-color: #FF0000;
+}
+
+.line-qr {
+    position: relative;
+    /* 相對定位 */
+    left: 50px;
+    /* 靠左 */
+}
+
+.contact-map-embed {
+    flex: 1 1 300px;
+    /* 寬度設定 */
+    min-width: 300px;
+    /* 最小寬度 */
+    max-width: 400px;
+    /* 最大寬度 */
+    position: relative;
+    /* 相對定位 */
+    left: 70px;
+    /* 靠左 */
+}
+
+.contact-map-embed iframe {
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1 / 1;
+    /* 寬高比 */
+    border: 0;
+    /* 無邊框 */
+}
 
 /* ========= 回到頂部按鈕 ========= */
 #backToTopBtn {
@@ -552,4 +780,41 @@ body {
     background-color: #ff0000;
     /* 懸停變色 */
     transform: translateY(-3px);
+}
+
+/* ========= 響應式：頁尾區塊 (Mobile) ========= */
+@media (max-width: 768px) {
+    .contact-map {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-text {
+        padding-top: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 0px;
+    }
+
+    .line-qr {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        left: 0px;
+    }
+
+    .line-qr img {
+        width: 300px;
+        height: auto;
+        margin-top: 0px;
+    }
+
+    .contact-map-embed {
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
 }
