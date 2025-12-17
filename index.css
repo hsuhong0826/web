@@ -385,7 +385,7 @@ body {
 
 .categories-partner .container {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     /* 控制項目間距 */
     justify-content: center;
@@ -638,12 +638,12 @@ body {
     }
 
     .menu {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -300px;
         width: 60vw;
         max-width: 110px;
-        height: 100vh;
+        height: 100%;
         background-color: #002244;
         padding-top: 60px;
         transition: right 0.3s ease;

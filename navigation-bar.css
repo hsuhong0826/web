@@ -178,7 +178,11 @@ body {
     position: relative;
     /* ✅ 讓內部小標題可以定位 */
     width: 1000px;
-    height: 340px;
+    max-width: 90vw;
+    /* ✅ 加上最大寬度限制 */
+    height: auto;
+    /* ✅ 高度自動調整 */
+    min-height: 340px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -234,15 +238,17 @@ body {
 
 .bubble {
     margin-top: 40px;
-    width: 700px;
-    /* ✅ 寬度 */
-    height: 200px;
-    /* ✅ 高度 */
+    width: 100%;
+    /* ✅ 寬度改為 100% */
+    max-width: 700px;
+    /* ✅ 最大寬度維持 700px */
+    height: auto;
+    /* ✅ 高度自動 */
+    min-height: 200px;
     background-color: #fff;
     padding: 18px 24px;
     border-radius: 20px;
     font-size: 22px;
-    max-width: 700px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: justify;
@@ -417,7 +423,7 @@ body {
     }
 
     .menu {
-        position: absolute;
+        position: fixed;
         /* 固定選單位置 */
         top: 0;
         /* 從畫面頂部開始 */
@@ -426,7 +432,7 @@ body {
         width: 60vw;
         /* 選單寬度 */
         max-width: 110px;
-        height: 100vh;
+        height: 100%;
         /* 滿版高度 */
         background-color: #002244;
         /* 背景色深藍 */

@@ -182,7 +182,8 @@ body {
 .about-overlay {
     display: flex;
     background-color: rgba(255, 255, 255, 0.85);
-    height: 470px;
+    min-height: 470px;
+    height: auto;
     padding: 80px;
     border-radius: 12px;
     max-width: 1000px;
@@ -268,7 +269,7 @@ body {
     }
 
     .menu {
-        position: absolute;
+        position: fixed;
         /* 固定選單位置 */
         top: 0;
         /* 從畫面頂部開始 */
@@ -277,7 +278,7 @@ body {
         width: 60vw;
         /* 選單寬度 */
         max-width: 110px;
-        height: 100vh;
+        height: 100%;
         /* 滿版高度 */
         background-color: #002244;
         /* 背景色深藍 */

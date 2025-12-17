@@ -321,12 +321,14 @@ body {
     border-bottom-left-radius: 6px;
 }
 
-/* 懸停效果 */
-.spec-list li:hover {
-    transform: translateX(5px);
-    /* 輕微右移 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fcfcfc;
+/* 懸停效果 - 僅在支援滑鼠懸停的裝置上啟用 (避免手機版點擊卡住) */
+@media (hover: hover) {
+    .spec-list li:hover {
+        transform: translateX(5px);
+        /* 輕微右移 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fcfcfc;
+    }
 }
 
 /* 重點文字樣式 */
@@ -399,7 +401,7 @@ body {
 @keyframes slideDown {
     from {
         opacity: 0;
-        transform: translateY(-5px);
+        transform: translateY(-10px);
     }
 
     to {
@@ -442,6 +444,14 @@ body {
 
 /* ========= 響應式設計：手機版樣式 ========= */
 @media (max-width: 768px) {
+
+    /* 手機版點擊展開時的效果 (不位移，但有陰影與背景色) */
+    .spec-list li.active {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fcfcfc;
+        transform: none;
+    }
+
     .logo-img {
         height: 50px;
     }
@@ -457,8 +467,8 @@ body {
     }
 
     .menu {
-        position: absolute;
-        /* 固定選單位置 */
+        position: fixed;
+        /* ✅ 改為 fixed，讓選單固定在視窗上，高度跟隨螢幕 */
         top: 0;
         /* 從畫面頂部開始 */
         right: -300px;
@@ -466,8 +476,8 @@ body {
         width: 60vw;
         /* 選單寬度 */
         max-width: 110px;
-        height: 100vh;
-        /* 滿版高度 */
+        height: 100%;
+        /* ✅ 改為 100% 確保填滿視窗高度 */
         background-color: #002244;
         /* 背景色深藍 */
         padding-top: 60px;
@@ -528,7 +538,7 @@ body {
         /* ✅ 手機版縮小字距 */
         text-indent: 15px;
         /* ✅ 增加縮排以平衡字距，解決偏左問題 */
-        margin: 10px 0;
+        margin: 0px 0;
         /* ✅ 調整間距 */
         text-align: center;
         width: 100%;
@@ -543,7 +553,8 @@ body {
 
     /* Merged from Block 3 */
     .chat-section {
-        padding: 30px 10px;
+        padding: 10px 10px;
+        /* ✅ 減少上方內距 */
         gap: 50px;
     }
 
@@ -598,6 +609,21 @@ body {
         /* 手機版字體稍小 */
         padding: 10px 12px;
         padding-left: 18px;
+    }
+
+    /* ✅ 手機版取消懸停位移，避免點擊後卡住 */
+    .spec-list li:hover,
+    .spec-list li:active,
+    .spec-list li:focus,
+    .spec-list li.active {
+        transform: none !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+        background-color: #ffffff !important;
+        margin-left: 0 !important;
+        padding-left: 18px !important;
+        /* ✅ 確保內距不變 */
+        width: 100% !important;
+        /* ✅ 確保寬度不變 */
     }
 
     .avatar-box {
