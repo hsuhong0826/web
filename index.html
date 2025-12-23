@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- 引入 Font Awesome 圖示庫 -->
-    <link rel="stylesheet" href="index.css" /> <!-- 引入外部樣式檔 -->
+    <link rel="stylesheet" href="css/index.css" /> <!-- 引入外部樣式檔 -->
 </head>
 
 <body>
@@ -153,14 +153,14 @@
 
             <!-- Line 二維碼 -->
             <div class="line-qr">
-                <img src="images/zanyao/line-qrcode.jpg" alt="Line QR Code" width="300" height="300">
+                <img src="images/zanyao/line-qrcode.jpg" alt="Line QR Code" width="275" height="275">
             </div>
 
             <!-- Google 地圖嵌入 -->
             <div class="contact-map-embed">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.970144211824!2d121.36427087595708!3d25.069001036880195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7b0bfa19b8b%3A0x62c68378f54fbb2f!2z6LSK6ICA6LOH6KiKIC3pgLHlha3poJDntITliLYo5LyB5qWt6LOH5a6J57ay566h5qmf5oi_6Zu76IWm562G6Zu76Zuy56uv5Ly65pyN5Zmo6Luf6auU5byx6Zu757at6K23Luizh-ioiuioreWCmeS-m-aHieWVhi7oqo3orYnlt6XnqIvluKsp!5e0!3m2!1szh-TW!2stw!4v1754199715638!5m2!1szh-TW!2stw"
-                    width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.970144211824!2d121.36427087595708!3d25.069001036880195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7b0bfa19b8b%3A0x62c68378f54fbb2f!2z6LSK6ICA6LOH6KiKIC3pgLHlha3poJDntITliLYo5LyB5qWt6LOH5a6J57ay566h5qmf5oi_6Zu76IWm562G6Zu76Ziy56uv5Ly65pyN5Zmo6Luf6auU5byx6Zu757at6K23Luizh-ioiuioreWCmeS-m-aHieWVhi7oqo3orYnlt6XnqIvluKsp!5e0!3m2!1szh-TW!2stw!4v1754199715638!5m2!1szh-TW!2stw"
+                    width="275" height="275" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -207,6 +207,34 @@
         function goToSlide(index) {
             showSlide(index); // 直接跳轉到指定張
         }
+
+        // --- 自動輪播功能（每 5 秒） ---
+        let autoSlideInterval = setInterval(nextSlide, 5000); // 每 5 秒自動切換到下一張
+
+        // 當使用者手動操作時，重置自動輪播計時器
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval); // 清除舊的計時器
+            autoSlideInterval = setInterval(nextSlide, 5000); // 重新設定 5 秒計時器
+        }
+
+        // 更新手動操作函式以重置自動輪播
+        const originalNextSlide = nextSlide;
+        nextSlide = function () {
+            originalNextSlide();
+            resetAutoSlide();
+        };
+
+        const originalPrevSlide = prevSlide;
+        prevSlide = function () {
+            originalPrevSlide();
+            resetAutoSlide();
+        };
+
+        const originalGoToSlide = goToSlide;
+        goToSlide = function (index) {
+            originalGoToSlide(index);
+            resetAutoSlide();
+        };
 
         // --- 回到頂部按鈕功能 ---
         let mybutton = document.getElementById("backToTopBtn");

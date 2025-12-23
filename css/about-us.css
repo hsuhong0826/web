@@ -1,0 +1,392 @@
+/* ========= Reset 預設重設 ========= */
+* {
+    margin: 0;
+    /* 移除所有元素的外邊距 */
+    padding: 0;
+    /* 移除所有元素的內邊距 */
+    box-sizing: border-box;
+    /* 設定 box-sizing 為 border-box，使寬高包含 padding 與 border */
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* ========= 全域設定 ========= */
+body {
+    font-family: "Segoe UI", sans-serif;
+    /* 設定全站字型 */
+    background: #f4f4f4;
+    /* 設定網頁背景色 */
+    color: #333;
+    /* 預設文字顏色 */
+}
+
+/* ========= 主容器設定 ========= */
+.container {
+    width: 90%;
+    /* 寬度為畫面的 90% */
+    max-width: 1200px;
+    /* 最大寬度限制為 1200px */
+    margin: auto;
+    /* 水平置中 */
+    display: flex;
+    /* 使用 Flex 排版 */
+    justify-content: space-between;
+    /* 子項目左右對齊 */
+    align-items: center;
+    /* 垂直置中 */
+    flex-wrap: wrap;
+    /* 允許子項目自動換行 */
+}
+
+/* ========= 導覽列主體 ========= */
+.navbar {
+    background: #002244;
+    /* 深藍色背景 */
+    color: #fff;
+    /* 白色文字 */
+    padding: 15px 0;
+    /* 上下內邊距 */
+    width: 100%;
+    /* 滿版寬度 */
+}
+
+/* ========= 導覽列內部容器 ========= */
+.navbar .container {
+    position: relative;
+    /* 為漢堡選單定位提供基準 */
+    width: 100%;
+    /* 寬度滿版 */
+    max-width: 100%;
+    /* 不限制最大寬度 */
+    margin: 0 auto;
+    /* 水平置中 */
+    display: flex;
+    /* 使用 Flex 排列內容 */
+    justify-content: space-between;
+    /* 左右貼齊對齊 */
+    align-items: center;
+    /* 垂直置中對齊 */
+    padding: 0;
+    /* 移除內距 */
+}
+
+/* ========= Logo 區塊 ========= */
+.navbar .logo {
+    font-size: 24px;
+    /* 字體大小 */
+    font-weight: bold;
+    /* 字體加粗 */
+    color: white;
+    /* 白色文字 */
+    margin-left: 60px;
+    /* 靠左內距 */
+}
+
+.logo-img {
+    height: 60px;
+}
+
+/* ========= 導覽連結容器 ========= */
+.navbar nav .nav-links {
+    list-style: none;
+    /* 移除清單點點 */
+    display: flex;
+    /* 水平排列 */
+    gap: 20px;
+    /* 項目之間的間距 */
+    padding-right: 60px;
+    /* 靠右內距 */
+    flex-wrap: wrap;
+    /* 項目可換行 */
+}
+
+/* ========= 導覽項目（li）設定 ========= */
+.navbar .nav-links li {
+    padding-left: 10px;
+    /* 左內距 */
+    padding-right: 10px;
+    /* 右內距 */
+}
+
+/* ========= 導覽超連結樣式 ========= */
+.navbar .nav-links li a {
+    color: white;
+    /* 白色文字 */
+    text-decoration: none;
+    /* 移除底線 */
+    font-weight: 500;
+    /* 中等字重 */
+    font-size: 18px;
+    /* 字體大小 */
+    transition: color 0.3s;
+    /* 滑鼠懸停時顏色變化過渡效果 */
+}
+
+/* ========= 版權區塊 ========= */
+.copyright {
+    background-color: #000000;
+    /* 白底 */
+    color: #ffffff;
+    /* 字色深灰 */
+    text-align: center;
+    /* 置中對齊 */
+    font-size: 14px;
+    /* 字體大小 */
+    padding: 12px 0;
+    /* 上下內距 */
+    border-top: none;
+    /* 上邊框 */
+}
+
+/* ========= 響應式：漢堡選單按鈕 ========= */
+.menu-toggle {
+    display: none;
+    /* 預設隱藏（僅手機版顯示） */
+    font-size: 32px;
+    /* 字體大小 */
+    color: white;
+    /* 白色圖示 */
+    cursor: pointer;
+    /* 游標變成手型 */
+    padding: 10px 20px;
+    /* 內距 */
+    position: absolute;
+    /* 絕對定位於右上角 */
+    right: 0;
+    /* 靠右對齊 */
+    top: 50%;
+    /* 垂直置中 */
+    transform: translateY(-50%);
+    /* 垂直平移置中 */
+    z-index: 1001;
+    /* 層級高於選單本體 */
+    background: transparent;
+    /* 背景透明 */
+}
+
+/* 關於我們滿版背景 */
+.about-container {
+    background-image: url('images/about-us/about-us-background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 半透明內層內容 */
+.about-overlay {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.85);
+    min-height: 470px;
+    height: auto;
+    padding: 80px;
+    border-radius: 12px;
+    max-width: 1000px;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+/* 左側LOGO區 */
+.logo-area {
+    flex: 1 1 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+.logo-area img {
+    height: 220px;
+    /* ✅ 強制高度 300px */
+    width: auto;
+    /* ✅ 保持寬高比例 */
+    object-fit: contain;
+    /* ✅ 圖片完整顯示 */
+}
+
+/* 右側文字區 */
+.text-area {
+    flex: 2 1 400px;
+    padding: 20px;
+}
+
+.company-name {
+    font-size: 38px;
+    color: #333;
+    margin: -55px 0 40px 100px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* ✅ 垂直置中 */
+    align-items: flex-start;
+    /* ✅ 靠右對齊 */
+    text-align: right;
+    /* ✅ 文字靠右 */
+}
+
+.slogan {
+    font-size: 18px;
+    color: #333;
+    line-height: 2;
+    /* ✅ 拉大行距 */
+    letter-spacing: 0.5px;
+    /* ✅ 微調字距 */
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: justify;
+    /* ✅ 兩端對齊 */
+}
+
+
+/* ========= 桌面版選單顯示（預設） ========= */
+.menu {
+    display: block;
+    /* 導覽選單預設為顯示 */
+}
+
+
+
+
+
+/* ========= 響應式設計：手機版樣式 ========= */
+@media (max-width: 768px) {
+
+    /* Block 1 Rules */
+    .menu-toggle {
+        display: block;
+        /* 顯示漢堡按鈕 */
+    }
+
+    .navbar .logo {
+        margin-left: 15px !important;
+        /* 改小一點 */
+    }
+
+    .menu {
+        position: fixed;
+        /* 固定選單位置 */
+        top: 0;
+        /* 從畫面頂部開始 */
+        right: -300px;
+        /* 初始隱藏於右側畫面外 */
+        width: 60vw;
+        /* 選單寬度 */
+        max-width: 110px;
+        height: 100%;
+        /* 滿版高度 */
+        background-color: #002244;
+        /* 背景色深藍 */
+        padding-top: 60px;
+        /* 上方留白以避開 logo */
+        transition: right 0.3s ease;
+        /* 滑出動畫 */
+        z-index: 1000;
+        /* 層級設定 */
+    }
+
+    .menu.open {
+        right: 0;
+        /* 加上 open 類別時滑出選單 */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        /* 導覽列改為直排 */
+        gap: 20px;
+        /* 每項間距 */
+        padding: 0 20px;
+        /* 內距避免文字貼邊 */
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        /* 垂直內距方便點擊 */
+    }
+
+    .nav-links a {
+        padding-left: 5px;
+        /* 左側距離，可依需求調整 */
+    }
+
+    /* Block 2 Rules (Overriding Block 1 where necessary) */
+    .logo-img {
+        height: 50px;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        /* 導覽列主容器改為直向排列 */
+        align-items: flex-start;
+        /* 導覽列內部元素靠左 */
+        position: relative;
+        /* 漢堡選單以此為定位基準 */
+    }
+
+    .navbar nav .nav-links {
+        flex-direction: column;
+        /* 導覽連結改為縱向排列 */
+        padding-left: 0;
+        /* 左邊距設為 0 */
+        padding-right: 0;
+        /* 右邊距設為 0 */
+    }
+
+    /* Block 3 Rules */
+    html,
+    body {
+        overflow-x: hidden;
+        /* ✅ 防止橫向捲動 */
+    }
+
+    .about-container {
+        padding-top: 100px;
+        /* ✅ 與導覽列分開 */
+        padding-bottom: 80px;
+        /* ✅ 與版權區保留距離 */
+        min-height: auto;
+        /* ✅ 讓高度由內容決定 */
+    }
+
+    .about-overlay {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 5px 10px 10px 10px;
+        width: 95%;
+        /* ✅ 防止寬度撐破畫面 */
+    }
+
+    .logo-area {
+        justify-content: center;
+        padding-left: 0;
+        margin-bottom: -40px;
+    }
+
+    .logo-area img {
+        height: 150px;
+        max-width: 100%;
+    }
+
+    .text-area {
+        text-align: center;
+    }
+
+    .company-name {
+        font-size: 26px;
+        margin: 0 0 20px 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .slogan {
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: justify;
+    }
+}
