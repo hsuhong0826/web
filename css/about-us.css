@@ -169,7 +169,7 @@ body {
 
 /* 關於我們滿版背景 */
 .about-container {
-    background-image: url('images/about-us/about-us-background.jpg');
+    background-image: url('../images/about-us/about-us-background.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -389,4 +389,5 @@ body {
         line-height: 1.8;
         text-align: justify;
     }
+
 }
